@@ -76,7 +76,7 @@ export default function EditorialSection() {
   return (
     <section
       ref={containerRef}
-      className="relative w-full bg-[#0B4745] text-[#FBF2E1] py-24 sm:py-36 md:py-44 px-5 sm:px-10 overflow-hidden border-t border-[var(--color-border)]"
+      className="relative w-full bg-[#0D1914] text-[#F7F4EE] py-24 sm:py-36 md:py-44 px-5 sm:px-10 overflow-hidden border-t border-[var(--color-border)]"
     >
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-20 items-center">
@@ -84,7 +84,7 @@ export default function EditorialSection() {
           <div className="lg:col-span-7">
             <div
               ref={imageWrapperRef}
-              className="relative w-full h-[440px] sm:h-[600px] lg:h-[720px] overflow-hidden bg-[#0E5653] shadow-2xl border border-[var(--color-border)]"
+              className="relative w-full h-[440px] sm:h-[600px] lg:h-[720px] overflow-hidden bg-[#1A2C25] shadow-2xl border border-[var(--color-border)]"
               data-cursor
               data-cursor-text="EDITORIAL"
             >
@@ -97,7 +97,7 @@ export default function EditorialSection() {
                 className="object-cover object-center will-change-transform brightness-[0.88] contrast-[1.05]"
               />
               {/* Editorial Caption Watermark */}
-              <div className="absolute bottom-5 left-5 z-10 text-[9px] sm:text-[10px] tracking-[0.35em] uppercase font-cinzel text-[#FBF2E1] drop-shadow-md">
+              <div className="absolute bottom-5 left-5 z-10 text-[9px] sm:text-[10px] tracking-[0.35em] uppercase font-cinzel text-[#F7F4EE] drop-shadow-md">
                 Campaign Monograph / Light Series 01
               </div>
             </div>
@@ -112,7 +112,7 @@ export default function EditorialSection() {
               <span className="text-[10px] tracking-[0.4em] uppercase text-[var(--color-gold)] font-cinzel block mb-3 sm:mb-4 font-medium">
                 The Architecture of Radiance
               </span>
-              <h2 className="font-serif text-4xl sm:text-6xl md:text-7xl tracking-[0.04em] uppercase font-light leading-[1.0] text-[#FBF2E1]">
+              <h2 className="font-serif text-4xl sm:text-6xl md:text-7xl tracking-[0.04em] uppercase font-light leading-[1.0] text-[#F7F4EE]">
                 DESIGNED <br />
                 AROUND <br />
                 <span className="italic font-normal text-[var(--color-gold)]">LIGHT.</span>
@@ -129,7 +129,7 @@ export default function EditorialSection() {
             <div>
               <a
                 href="#craft"
-                className="group inline-flex items-center space-x-3 text-xs tracking-[0.25em] uppercase font-cinzel text-[#FBF2E1] hover:text-[var(--color-gold)] transition-colors"
+                className="group inline-flex items-center space-x-3 text-xs tracking-[0.25em] uppercase font-cinzel text-[#F7F4EE] hover:text-[var(--color-gold)] transition-colors"
                 data-cursor
                 data-cursor-text="CRAFT"
               >

@@ -35,7 +35,7 @@ export default function ProductGrid() {
   return (
     <section
       id="featured"
-      className="relative w-full bg-[#0B4745] text-[#FBF2E1] py-24 sm:py-36 md:py-44 px-5 sm:px-10 border-t border-[var(--color-border)]"
+      className="relative w-full bg-[#0D1914] text-[#F7F4EE] py-24 sm:py-36 md:py-44 px-5 sm:px-10 border-t border-[var(--color-border)]"
     >
       <div className="max-w-7xl mx-auto">
         {/* Section Heading & Category Filter */}
@@ -45,7 +45,7 @@ export default function ProductGrid() {
               <Sparkles className="w-3.5 h-3.5" />
               <span>Curated Selection</span>
             </div>
-            <h2 className="font-serif text-3xl sm:text-5xl lg:text-6xl tracking-[0.05em] uppercase font-light text-[#FBF2E1]">
+            <h2 className="font-serif text-3xl sm:text-5xl lg:text-6xl tracking-[0.05em] uppercase font-light text-[#F7F4EE]">
               FEATURED CREATIONS
             </h2>
           </div>
@@ -58,8 +58,8 @@ export default function ProductGrid() {
                 onClick={() => setFilter(cat.key)}
                 className={`text-xs uppercase tracking-[0.22em] font-cinzel transition-colors ${
                   filter === cat.key
-                    ? "text-[#FBF2E1] border-b border-[var(--color-gold)] pb-1 font-semibold"
-                    : "text-[var(--color-text-secondary)] hover:text-[#FBF2E1]"
+                    ? "text-[#F7F4EE] border-b border-[var(--color-gold)] pb-1 font-semibold"
+                    : "text-[var(--color-text-secondary)] hover:text-[#F7F4EE]"
                 }`}
               >
                 {cat.label}
@@ -80,7 +80,7 @@ export default function ProductGrid() {
               >
                 {/* Large Editorial Image Container */}
                 <div
-                  className="relative w-full h-[420px] sm:h-[580px] lg:h-[680px] bg-[#0E5653] overflow-hidden cursor-pointer border border-[var(--color-border)] shadow-2xl"
+                  className="relative w-full h-[420px] sm:h-[580px] lg:h-[680px] bg-[#1A2C25] overflow-hidden cursor-pointer border border-[var(--color-border)] shadow-2xl"
                   data-cursor
                   data-cursor-text="VIEW"
                   onClick={() => setActiveQuickViewProduct(product)}
@@ -95,7 +95,7 @@ export default function ProductGrid() {
 
                   {/* Top Badges / Wishlist */}
                   <div className="absolute top-4 left-4 right-4 flex justify-between items-center z-10">
-                    <span className="text-[9px] tracking-[0.3em] font-cinzel uppercase px-2.5 py-1 bg-[#0B4745]/85 backdrop-blur-md text-[var(--color-gold)] border border-[var(--color-border)]">
+                    <span className="text-[9px] tracking-[0.3em] font-cinzel uppercase px-2.5 py-1 bg-[#0D1914]/85 backdrop-blur-md text-[var(--color-gold)] border border-[var(--color-border)]">
                       {product.tag || "Atelier"}
                     </span>
 
@@ -104,21 +104,21 @@ export default function ProductGrid() {
                         e.stopPropagation();
                         toggleWishlist(product.id);
                       }}
-                      className="p-2 bg-[#0B4745]/85 backdrop-blur-md border border-[var(--color-border)] text-[#FBF2E1] hover:text-[var(--color-gold)] transition-colors"
+                      className="p-2 bg-[#0D1914]/85 backdrop-blur-md border border-[var(--color-border)] text-[#F7F4EE] hover:text-[var(--color-gold)] transition-colors"
                       aria-label="Wishlist Item"
                     >
                       <Heart
                         className={`w-4 h-4 stroke-[1.4] ${
                           isWishlisted
                             ? "fill-[var(--color-gold)] text-[var(--color-gold)]"
-                            : "text-[#FBF2E1]"
+                            : "text-[#F7F4EE]"
                         }`}
                       />
                     </button>
                   </div>
 
                   {/* Subtle vignette on hover */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#0B4745]/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#0D1914]/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
 
                   {/* Quick Add overlay at bottom */}
                   <div className="absolute bottom-5 left-5 right-5 flex items-center justify-between opacity-0 group-hover:opacity-100 transform translate-y-2 group-hover:translate-y-0 transition-all duration-300 pointer-events-auto">
@@ -127,7 +127,7 @@ export default function ProductGrid() {
                         e.stopPropagation();
                         addToCart(product);
                       }}
-                      className="bg-[var(--color-gold)] text-[#0B4745] font-semibold px-4 sm:px-5 py-2.5 sm:py-3 text-[10px] tracking-[0.25em] font-cinzel uppercase flex items-center space-x-2 hover:bg-[#FBF2E1] transition-colors shadow-xl"
+                      className="bg-[var(--color-gold)] text-[#0D1914] font-semibold px-4 sm:px-5 py-2.5 sm:py-3 text-[10px] tracking-[0.25em] font-cinzel uppercase flex items-center space-x-2 hover:bg-[#F7F4EE] transition-colors shadow-xl"
                     >
                       <Plus className="w-3.5 h-3.5" />
                       <span>Acquire Piece</span>
@@ -138,7 +138,7 @@ export default function ProductGrid() {
                         e.stopPropagation();
                         setActiveQuickViewProduct(product);
                       }}
-                      className="bg-[#0B4745]/85 text-[#FBF2E1] p-2.5 sm:p-3 backdrop-blur-md hover:bg-[#0B4745] transition-colors shadow-lg border border-[var(--color-border)]"
+                      className="bg-[#0D1914]/85 text-[#F7F4EE] p-2.5 sm:p-3 backdrop-blur-md hover:bg-[#0D1914] transition-colors shadow-lg border border-[var(--color-border)]"
                       aria-label="View Details"
                     >
                       <Eye className="w-4 h-4 stroke-[1.4]" />
@@ -151,7 +151,7 @@ export default function ProductGrid() {
                   <div>
                     <h3
                       onClick={() => setActiveQuickViewProduct(product)}
-                      className="font-serif text-2xl sm:text-3xl tracking-[0.04em] uppercase text-[#FBF2E1] group-hover:text-[var(--color-gold)] transition-colors cursor-pointer"
+                      className="font-serif text-2xl sm:text-3xl tracking-[0.04em] uppercase text-[#F7F4EE] group-hover:text-[var(--color-gold)] transition-colors cursor-pointer"
                     >
                       {product.name}
                     </h3>

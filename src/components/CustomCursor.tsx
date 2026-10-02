@@ -92,8 +92,8 @@ export default function CustomCursor() {
       <div
         className={`rounded-full border flex items-center justify-center transition-all duration-300 ease-out ${
           isHovered
-            ? "w-20 h-20 bg-[#FBF2E1] text-[#0B4745] border-transparent scale-100 shadow-2xl"
-            : "w-3.5 h-3.5 bg-[#FBF2E1] border-[#FBF2E1]/60 scale-100"
+            ? "w-20 h-20 bg-[#F7F4EE] text-[#0D1914] border-transparent scale-100 shadow-2xl"
+            : "w-3.5 h-3.5 bg-[#F7F4EE] border-[#F7F4EE]/60 scale-100"
         }`}
       >
         {isHovered && cursorText && (

@@ -1,19 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap');
 @import "tailwindcss";
 
-/* Regal Emerald (#0B4745), Ivory Silk (#FBF2E1) & Heirloom Gold (#D2B68A) */
+/* Royal Indian Heritage + Maharani Bridal Luxury */
+/* Deep Forest Emerald (#0D1914), Warm Sand Ivory (#F7F4EE) & Antique Gold (#C8A355) */
 :root {
-  --color-bg: #0B4745;
-  --color-bg-secondary: #083735;
-  --color-surface: #0E5653;
-  --color-surface-subtle: #126562;
-  --color-dark: #052625;
-  --color-gold: #D2B68A;
-  --color-gold-muted: #B89B6C;
-  --color-text: #FBF2E1;
-  --color-text-secondary: #D1C7B4;
-  --color-border: rgba(210, 182, 138, 0.22);
-  --color-border-subtle: rgba(251, 242, 225, 0.1);
+  --color-bg: #0D1914;
+  --color-bg-secondary: #13221C;
+  --color-surface: #1A2C25;
+  --color-surface-subtle: #233A31;
+  --color-dark: #070E0B;
+  --color-gold: #C8A355;
+  --color-gold-muted: #9E7E38;
+  --color-text: #F7F4EE;
+  --color-text-secondary: #A9B4AC;
+  --color-border: rgba(200, 163, 85, 0.22);
+  --color-border-subtle: rgba(247, 244, 238, 0.08);
 }
 
 @theme {
@@ -71,7 +72,7 @@ body {
 
 ::selection {
   background-color: var(--color-gold);
-  color: #0B4745;
+  color: #0D1914;
 }
 
 /* Luxury Editorial Typography Classes */
@@ -142,7 +143,7 @@ body {
 
 .btn-editorial-light:hover {
   background: var(--color-gold);
-  color: #0B4745;
+  color: #0D1914;
   border-color: var(--color-gold);
 }
 
@@ -154,6 +155,6 @@ body {
 
 .btn-editorial-dark:hover {
   background: var(--color-gold);
-  color: #0B4745;
+  color: #0D1914;
   border-color: var(--color-gold);
 }

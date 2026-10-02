@@ -29,22 +29,22 @@ export default function QuickViewModal() {
       {/* Backdrop */}
       <div
         onClick={() => setActiveQuickViewProduct(null)}
-        className="fixed inset-0 bg-[#0B4745]/85 backdrop-blur-md animate-in fade-in duration-300"
+        className="fixed inset-0 bg-[#0D1914]/90 backdrop-blur-md animate-in fade-in duration-300"
       />
 
       {/* Modal Card */}
-      <div className="relative w-full max-w-4xl bg-[#083735] text-[#FBF2E1] shadow-2xl border border-[var(--color-border)] overflow-hidden z-10 grid grid-cols-1 md:grid-cols-12 max-h-[92vh] overflow-y-auto animate-in zoom-in-95 duration-300">
+      <div className="relative w-full max-w-4xl bg-[#13221C] text-[#F7F4EE] shadow-2xl border border-[var(--color-border)] overflow-hidden z-10 grid grid-cols-1 md:grid-cols-12 max-h-[92vh] overflow-y-auto animate-in zoom-in-95 duration-300">
         {/* Close Button */}
         <button
           onClick={() => setActiveQuickViewProduct(null)}
-          className="absolute top-3 right-3 sm:top-4 sm:right-4 z-20 p-2 bg-[#0B4745]/80 backdrop-blur-sm text-[#FBF2E1] hover:text-[var(--color-gold)] transition-colors border border-[var(--color-border)]"
+          className="absolute top-3 right-3 sm:top-4 sm:right-4 z-20 p-2 bg-[#0D1914]/80 backdrop-blur-sm text-[#F7F4EE] hover:text-[var(--color-gold)] transition-colors border border-[var(--color-border)]"
           aria-label="Close"
         >
           <X className="w-5 h-5 stroke-[1.4]" />
         </button>
 
         {/* Left Column: Image Viewer with Multiple Angles */}
-        <div className="md:col-span-6 bg-[#0E5653] relative h-[320px] sm:h-[440px] md:h-full min-h-[320px]">
+        <div className="md:col-span-6 bg-[#1A2C25] relative h-[320px] sm:h-[440px] md:h-full min-h-[320px]">
           <Image
             src={currentImage}
             alt={activeQuickViewProduct.name}
@@ -97,7 +97,7 @@ export default function QuickViewModal() {
               </span>
               <button
                 onClick={() => toggleWishlist(activeQuickViewProduct.id)}
-                className="p-1.5 text-[#FBF2E1] hover:text-[var(--color-gold)] transition-colors"
+                className="p-1.5 text-[#F7F4EE] hover:text-[var(--color-gold)] transition-colors"
                 aria-label="Wishlist"
               >
                 <Heart
@@ -108,7 +108,7 @@ export default function QuickViewModal() {
               </button>
             </div>
 
-            <h3 className="font-serif text-2xl sm:text-3xl md:text-4xl uppercase tracking-wide leading-tight text-[#FBF2E1]">
+            <h3 className="font-serif text-2xl sm:text-3xl md:text-4xl uppercase tracking-wide leading-tight text-[#F7F4EE]">
               {activeQuickViewProduct.name}
             </h3>
 
@@ -126,7 +126,7 @@ export default function QuickViewModal() {
                 <span className="text-[var(--color-text-secondary)] font-cinzel text-[10px] uppercase tracking-wider">
                   Metal & Purity
                 </span>
-                <span className="text-[#FBF2E1] font-medium">
+                <span className="text-[#F7F4EE] font-medium">
                   {activeQuickViewProduct.specifications.metal}
                 </span>
               </div>
@@ -134,7 +134,7 @@ export default function QuickViewModal() {
                 <span className="text-[var(--color-text-secondary)] font-cinzel text-[10px] uppercase tracking-wider">
                   Gemstone
                 </span>
-                <span className="text-[#FBF2E1] font-medium">
+                <span className="text-[#F7F4EE] font-medium">
                   {activeQuickViewProduct.specifications.gemstone}
                 </span>
               </div>
@@ -142,7 +142,7 @@ export default function QuickViewModal() {
                 <span className="text-[var(--color-text-secondary)] font-cinzel text-[10px] uppercase tracking-wider">
                   Cut & Symmetry
                 </span>
-                <span className="text-[#FBF2E1] font-medium">
+                <span className="text-[#F7F4EE] font-medium">
                   {activeQuickViewProduct.specifications.cut}
                 </span>
               </div>
@@ -150,7 +150,7 @@ export default function QuickViewModal() {
                 <span className="text-[var(--color-text-secondary)] font-cinzel text-[10px] uppercase tracking-wider">
                   Atelier Provenance
                 </span>
-                <span className="text-[#FBF2E1] font-medium">
+                <span className="text-[#F7F4EE] font-medium">
                   {activeQuickViewProduct.specifications.origin}
                 </span>
               </div>
@@ -164,7 +164,7 @@ export default function QuickViewModal() {
                 addToCart(activeQuickViewProduct);
                 setActiveQuickViewProduct(null);
               }}
-              className="w-full py-3.5 sm:py-4 bg-[var(--color-gold)] text-[#0B4745] text-[10px] tracking-[0.3em] font-cinzel uppercase font-semibold flex items-center justify-center space-x-2 hover:bg-[#FBF2E1] transition-colors shadow-lg"
+              className="w-full py-3.5 sm:py-4 bg-[var(--color-gold)] text-[#0D1914] text-[10px] tracking-[0.3em] font-cinzel uppercase font-semibold flex items-center justify-center space-x-2 hover:bg-[#F7F4EE] transition-colors shadow-lg"
             >
               <Plus className="w-4 h-4" />
               <span>Acquire This Piece</span>
