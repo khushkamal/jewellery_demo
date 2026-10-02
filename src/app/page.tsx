@@ -1,69 +1,85 @@
-import Image from "next/image";
+"use client";
+
+import { ThemeProvider } from "@/context/ThemeContext";
+import { CartProvider } from "@/context/CartContext";
+import SmoothScroll from "@/components/SmoothScroll";
+import CustomCursor from "@/components/CustomCursor";
+import Preloader from "@/components/Preloader";
+import Navbar from "@/components/Navbar";
+import Hero from "@/components/Hero";
+import CollectionIntro from "@/components/CollectionIntro";
+import HorizontalCollection from "@/components/HorizontalCollection";
+import ProductShowcase from "@/components/ProductShowcase";
+import EditorialSection from "@/components/EditorialSection";
+import CraftSection from "@/components/CraftSection";
+import BridalSection from "@/components/BridalSection";
+import BespokeSection from "@/components/BespokeSection";
+import ProductGrid from "@/components/ProductGrid";
+import PhilosophySection from "@/components/PhilosophySection";
+import InstagramSection from "@/components/InstagramSection";
+import Footer from "@/components/Footer";
+import CartDrawer from "@/components/CartDrawer";
+import QuickViewModal from "@/components/QuickViewModal";
 
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert h-5 w-[100px]"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the{" "}
-            <code className="rounded bg-black/[.06] px-1.5 py-0.5 font-mono text-[0.9em] dark:bg-white/[.08]">
-              page.tsx
-            </code>{" "}
-            file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert h-[14px] w-4"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={14}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
-    </div>
+    <ThemeProvider>
+      <CartProvider>
+        <SmoothScroll>
+          {/* Preloader with vertical curtain reveal */}
+          <Preloader />
+
+          {/* Custom Luxury Magnetic Cursor */}
+          <CustomCursor />
+
+          {/* Thin Luxury Navigation Bar with Live Palette Switcher */}
+          <Navbar />
+
+          <main className="relative w-full overflow-hidden bg-[var(--color-bg)] transition-colors duration-500">
+            {/* Hero Section with Pinned GSAP Scrubbed Timeline */}
+            <Hero />
+
+            {/* Collection Editorial Intro */}
+            <CollectionIntro />
+
+            {/* Pinned Horizontal Scrolling Gallery (01-04 Signature Pieces) */}
+            <HorizontalCollection />
+
+            {/* Immersive Product Showcase: The Celeste */}
+            <ProductShowcase />
+
+            {/* Split-Screen Editorial Section: "Designed Around Light" */}
+            <EditorialSection />
+
+            {/* Craftsmanship Section: "Crafted by Hand" */}
+            <CraftSection />
+
+            {/* Bridal Section: "For the Moment" */}
+            <BridalSection />
+
+            {/* Bespoke Atelier Section: "Made for You" */}
+            <BespokeSection />
+
+            {/* Featured Ecommerce Product Grid: 2 Columns */}
+            <ProductGrid />
+
+            {/* Philosophy Typography Section: "Jewellery Should Feel Like a Part of You" */}
+            <PhilosophySection />
+
+            {/* Instagram / Social Campaign: "Follow the Light" */}
+            <InstagramSection />
+          </main>
+
+          {/* Luxury Editorial Footer */}
+          <Footer />
+
+          {/* Interactive Shopping Bag Drawer */}
+          <CartDrawer />
+
+          {/* Quick View / Masterpiece Specification Modal */}
+          <QuickViewModal />
+        </SmoothScroll>
+      </CartProvider>
+    </ThemeProvider>
   );
 }
