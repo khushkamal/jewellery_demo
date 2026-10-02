@@ -34,10 +34,10 @@ export default function Navbar() {
     { name: "Bespoke", href: "#bespoke" },
   ];
 
-  const themeOptions: { key: ThemeType; label: string; dotColor: string }[] = [
-    { key: "noir", label: "Royal Noir", dotColor: "#C5A059" },
-    { key: "ivory", label: "Ivory Silk", dotColor: "#B89557" },
-    { key: "emerald", label: "Emerald", dotColor: "#2E5339" },
+  const themeOptions: { key: ThemeType; label: string }[] = [
+    { key: "ivory", label: "Alabaster Light" },
+    { key: "noir", label: "Royal Noir" },
+    { key: "emerald", label: "Emerald" },
   ];
 
   const scrollToSection = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
@@ -54,7 +54,7 @@ export default function Navbar() {
       <header
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
           isScrolled
-            ? "bg-[#0A0A09]/90 [data-theme='ivory']:bg-[#F5F1EA]/90 [data-theme='emerald']:bg-[#0A1410]/90 backdrop-blur-md border-b border-[var(--color-border)] py-3.5 shadow-xl"
+            ? "bg-[var(--color-bg)]/90 backdrop-blur-md border-b border-[var(--color-border)] py-3.5 shadow-sm"
             : "bg-transparent py-6"
         }`}
       >
@@ -85,15 +85,15 @@ export default function Navbar() {
             </Link>
 
             {/* Quick Theme Switcher Pill (Desktop) */}
-            <div className="hidden xl:flex items-center space-x-1.5 px-2.5 py-1 rounded-full border border-[var(--color-border)] bg-[var(--color-bg)]/40 backdrop-blur-md">
+            <div className="hidden xl:flex items-center space-x-1.5 px-2.5 py-1 rounded-full border border-[var(--color-border)] bg-[var(--color-bg)]/60 backdrop-blur-md shadow-sm">
               <Sparkles className="w-3 h-3 text-[var(--color-gold)] mr-1" />
               {themeOptions.map((opt) => (
                 <button
                   key={opt.key}
                   onClick={() => setTheme(opt.key)}
-                  className={`text-[9px] uppercase tracking-[0.18em] font-cinzel px-2 py-0.5 rounded-full transition-all ${
+                  className={`text-[9px] uppercase tracking-[0.18em] font-cinzel px-2.5 py-0.5 rounded-full transition-all ${
                     theme === opt.key
-                      ? "bg-[var(--color-gold)] text-[#0A0A09] font-semibold shadow-sm"
+                      ? "bg-[var(--color-dark)] text-[var(--color-bg)] font-semibold shadow-sm"
                       : "text-[var(--color-text-secondary)] hover:text-[var(--color-text)]"
                   }`}
                 >
@@ -152,7 +152,7 @@ export default function Navbar() {
             >
               <Heart className="w-4 h-4 stroke-[1.25]" />
               {wishlist.length > 0 && (
-                <span className="absolute -top-1 -right-1.5 w-3.5 h-3.5 bg-[var(--color-gold)] text-[#0A0A09] text-[8px] font-sans font-bold rounded-full flex items-center justify-center">
+                <span className="absolute -top-1 -right-1.5 w-3.5 h-3.5 bg-[var(--color-gold)] text-[var(--color-bg)] text-[8px] font-sans font-bold rounded-full flex items-center justify-center">
                   {wishlist.length}
                 </span>
               )}
@@ -238,7 +238,7 @@ export default function Navbar() {
                     onClick={() => setTheme(opt.key)}
                     className={`text-[10px] uppercase tracking-wider font-cinzel px-3 py-1.5 rounded-full border transition-all ${
                       theme === opt.key
-                        ? "bg-[var(--color-gold)] text-[#0A0A09] border-[var(--color-gold)] font-medium"
+                        ? "bg-[var(--color-dark)] text-[var(--color-bg)] border-[var(--color-dark)] font-medium"
                         : "border-[var(--color-border)] text-[var(--color-text)]"
                     }`}
                   >

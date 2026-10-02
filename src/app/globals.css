@@ -1,11 +1,27 @@
 @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap');
 @import "tailwindcss";
 
-/* Royal Noir & Champagne Gold (Default Theme) */
+/* Ultra-Premium Light Luxury Combo (Default) - Alabaster Silk & Royal Champagne Gold */
 :root {
+  --color-bg: #FAF7F2;
+  --color-bg-secondary: #F2ECE1;
+  --color-surface: #FFFFFF;
+  --color-surface-subtle: #EBE3D6;
+  --color-dark: #161412;
+  --color-gold: #B38F4D;
+  --color-gold-muted: #967537;
+  --color-text: #161412;
+  --color-text-secondary: #6B645B;
+  --color-border: rgba(22, 20, 18, 0.1);
+  --color-border-subtle: rgba(22, 20, 18, 0.05);
+}
+
+/* Royal Noir & Champagne Gold (Dark Mood) */
+[data-theme="noir"] {
   --color-bg: #0A0A09;
   --color-bg-secondary: #141311;
   --color-surface: #1A1916;
+  --color-surface-subtle: #24221E;
   --color-dark: #070706;
   --color-gold: #C5A059;
   --color-gold-muted: #9E7E3C;
@@ -15,25 +31,12 @@
   --color-border-subtle: rgba(245, 242, 235, 0.06);
 }
 
-/* Ivory Silk (Classic Atelier) */
-[data-theme="ivory"] {
-  --color-bg: #F5F1EA;
-  --color-bg-secondary: #EAE3D8;
-  --color-surface: #DFD7C9;
-  --color-dark: #11100E;
-  --color-gold: #B89557;
-  --color-gold-muted: #9D814E;
-  --color-text: #171513;
-  --color-text-secondary: #706A61;
-  --color-border: rgba(23, 21, 19, 0.12);
-  --color-border-subtle: rgba(23, 21, 19, 0.06);
-}
-
 /* Regal Emerald (Maharani Heritage) */
 [data-theme="emerald"] {
   --color-bg: #0A1410;
   --color-bg-secondary: #11201A;
   --color-surface: #172B23;
+  --color-surface-subtle: #1F382E;
   --color-dark: #060D0A;
   --color-gold: #D4AF37;
   --color-gold-muted: #A88624;
@@ -96,8 +99,8 @@ body {
 }
 
 ::selection {
-  background-color: var(--color-gold);
-  color: #0A0A09;
+  background-color: var(--color-dark);
+  color: var(--color-bg);
 }
 
 /* Luxury Editorial Typography Classes */
@@ -166,19 +169,19 @@ body {
 }
 
 .btn-editorial-light:hover {
-  background: var(--color-gold);
-  color: #0A0A09;
-  border-color: var(--color-gold);
+  background: var(--color-dark);
+  color: var(--color-bg);
+  border-color: var(--color-dark);
 }
 
 .btn-editorial-dark {
-  border: 1px solid rgba(197, 160, 89, 0.4);
+  border: 1px solid var(--color-border);
   color: var(--color-text);
   background: transparent;
 }
 
 .btn-editorial-dark:hover {
-  background: var(--color-gold);
-  color: #0A0A09;
-  border-color: var(--color-gold);
+  background: var(--color-dark);
+  color: var(--color-bg);
+  border-color: var(--color-dark);
 }

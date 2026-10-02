@@ -8,13 +8,13 @@ export default function Footer() {
   };
 
   return (
-    <footer className="relative w-full bg-[#070706] text-[var(--color-text)] pt-24 pb-12 px-6 sm:px-12 select-none border-t border-[var(--color-border)]">
+    <footer className="relative w-full bg-[var(--color-bg-secondary)] text-[var(--color-text)] pt-24 pb-12 px-6 sm:px-12 select-none border-t border-[var(--color-border)]">
       <div className="max-w-7xl mx-auto">
         {/* Top: Massive Editorial Brandmark */}
         <div className="border-b border-[var(--color-border)] pb-16 sm:pb-20">
           <div className="flex flex-col md:flex-row justify-between items-start md:items-end gap-8 mb-8">
             <div>
-              <span className="text-[10px] tracking-[0.45em] uppercase text-[var(--color-gold)] font-cinzel block mb-2">
+              <span className="text-[10px] tracking-[0.45em] uppercase text-[var(--color-gold)] font-cinzel block mb-2 font-medium">
                 Fine Jewellery Maison
               </span>
               <h2 className="font-serif text-6xl sm:text-8xl md:text-9xl tracking-[0.18em] uppercase font-light leading-none text-[var(--color-text)]">
@@ -23,7 +23,7 @@ export default function Footer() {
             </div>
 
             <div className="flex flex-col items-start md:items-end text-left md:text-right">
-              <p className="font-serif italic text-base sm:text-xl text-[var(--color-text)]/80">
+              <p className="font-serif italic text-base sm:text-xl text-[var(--color-text-secondary)]">
                 &ldquo;Crafted to be Remembered.&rdquo;
               </p>
               <span className="text-[10px] tracking-[0.3em] font-cinzel text-[var(--color-text-secondary)] uppercase mt-2">

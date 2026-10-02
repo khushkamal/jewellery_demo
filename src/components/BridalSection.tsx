@@ -60,7 +60,7 @@ export default function BridalSection() {
     <section
       ref={containerRef}
       id="bridal"
-      className="relative w-full h-[115vh] overflow-hidden bg-[#0A0A09] text-[var(--color-text)] flex items-center justify-center select-none"
+      className="relative w-full h-[115vh] overflow-hidden bg-[var(--color-bg)] text-[var(--color-text)] flex items-center justify-center select-none border-t border-[var(--color-border)]"
     >
       {/* Background Indian Bridal Editorial Image */}
       <div
@@ -72,15 +72,14 @@ export default function BridalSection() {
           alt="Aurelia Haute Bridal Monograph"
           fill
           sizes="100vw"
-          className="object-cover object-center brightness-[0.65] contrast-[1.12]"
+          className="object-cover object-center brightness-[0.88] contrast-[1.08]"
         />
-        {/* Editorial Magazine Gradients */}
-        <div className="absolute inset-0 bg-gradient-to-t from-[#0A0A09] via-transparent to-[#0A0A09]/65" />
-        <div className="absolute inset-0 bg-radial-gradient from-transparent via-[#0A0A09]/20 to-[#0A0A09]/80" />
+        {/* Editorial Light Atmospheric Vignette */}
+        <div className="absolute inset-0 bg-gradient-to-t from-[var(--color-bg)] via-[var(--color-bg)]/20 to-[var(--color-bg)]/60" />
       </div>
 
       {/* Magazine Masthead Accent (Top) */}
-      <div className="absolute top-12 left-0 right-0 z-20 max-w-7xl mx-auto px-6 sm:px-12 flex justify-between items-center text-[10px] tracking-[0.4em] uppercase font-cinzel text-[var(--color-text)]/70">
+      <div className="absolute top-12 left-0 right-0 z-20 max-w-7xl mx-auto px-6 sm:px-12 flex justify-between items-center text-[10px] tracking-[0.4em] uppercase font-cinzel text-[var(--color-text-secondary)] font-medium">
         <span>HAUTE BRIDAL EDITION</span>
         <span>AURELIA ARCHIVES / 2026</span>
       </div>
@@ -90,11 +89,11 @@ export default function BridalSection() {
         ref={overlayTextRef}
         className="relative z-20 max-w-5xl mx-auto px-6 text-center flex flex-col items-center will-change-transform"
       >
-        <span className="text-xs sm:text-sm tracking-[0.45em] uppercase text-[var(--color-gold)] font-cinzel mb-4 block">
+        <span className="text-xs sm:text-sm tracking-[0.45em] uppercase text-[var(--color-gold)] font-cinzel mb-4 block font-semibold">
           Bridal Collection
         </span>
 
-        <h2 className="font-serif text-6xl sm:text-8xl md:text-9xl tracking-[0.04em] uppercase font-light leading-[0.88] text-[var(--color-text)] drop-shadow-2xl">
+        <h2 className="font-serif text-6xl sm:text-8xl md:text-9xl tracking-[0.04em] uppercase font-light leading-[0.88] text-[var(--color-text)] drop-shadow-sm">
           <span ref={forWordRef} className="block">
             FOR
           </span>
@@ -106,7 +105,7 @@ export default function BridalSection() {
           </span>
         </h2>
 
-        <p className="mt-8 font-serif text-base sm:text-xl text-[var(--color-text)]/85 italic max-w-lg leading-relaxed">
+        <p className="mt-8 font-serif text-base sm:text-xl text-[var(--color-text-secondary)] italic max-w-lg leading-relaxed">
           Royal Polki choker sets, unheated Burmese rubies and certified Zambian
           emeralds crafted for sacred milestones.
         </p>
@@ -114,7 +113,7 @@ export default function BridalSection() {
         <div className="mt-10">
           <a
             href="#bespoke"
-            className="btn-editorial btn-editorial-dark group"
+            className="btn-editorial btn-editorial-light group"
             data-cursor
             data-cursor-text="BRIDAL"
           >

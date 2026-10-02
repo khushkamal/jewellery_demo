@@ -2,7 +2,7 @@
 
 import React, { createContext, useContext, useState, useEffect } from "react";
 
-export type ThemeType = "noir" | "ivory" | "emerald";
+export type ThemeType = "ivory" | "noir" | "emerald";
 
 interface ThemeContextType {
   theme: ThemeType;
@@ -13,8 +13,8 @@ interface ThemeContextType {
 const ThemeContext = createContext<ThemeContextType | undefined>(undefined);
 
 export function ThemeProvider({ children }: { children: React.ReactNode }) {
-  // Default to Royal Noir
-  const [theme, setThemeState] = useState<ThemeType>("noir");
+  // Default to Ultra-Premium Light (Ivory & Champagne Gold)
+  const [theme, setThemeState] = useState<ThemeType>("ivory");
 
   useEffect(() => {
     try {
@@ -23,16 +23,17 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
         setThemeState(saved);
         applyTheme(saved);
       } else {
-        applyTheme("noir");
+        applyTheme("ivory");
       }
     } catch {
-      applyTheme("noir");
+      applyTheme("ivory");
     }
   }, []);
 
   const applyTheme = (t: ThemeType) => {
     const root = document.documentElement;
-    if (t === "noir") {
+    if (t === "ivory") {
+      // Default light theme lives in :root
       root.removeAttribute("data-theme");
     } else {
       root.setAttribute("data-theme", t);
@@ -49,9 +50,9 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
 
   const toggleTheme = () => {
     const next: Record<ThemeType, ThemeType> = {
-      noir: "ivory",
-      ivory: "emerald",
-      emerald: "noir",
+      ivory: "noir",
+      noir: "emerald",
+      emerald: "ivory",
     };
     setTheme(next[theme]);
   };
@@ -67,7 +68,7 @@ export function useTheme() {
   const context = useContext(ThemeContext);
   if (!context) {
     return {
-      theme: "noir" as ThemeType,
+      theme: "ivory" as ThemeType,
       setTheme: () => {},
       toggleTheme: () => {},
     };

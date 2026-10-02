@@ -9,7 +9,7 @@ export default function Hero() {
   const sectionRef = useRef<HTMLDivElement | null>(null);
   const bgImage1Ref = useRef<HTMLDivElement | null>(null);
   const bgImage2Ref = useRef<HTMLDivElement | null>(null);
-  const darkOverlayRef = useRef<HTMLDivElement | null>(null);
+  const overlayRef = useRef<HTMLDivElement | null>(null);
 
   const initialTextGroupRef = useRef<HTMLDivElement | null>(null);
   const heading1Ref = useRef<HTMLHeadingElement | null>(null);
@@ -99,9 +99,9 @@ export default function Hero() {
           0.05
         )
         .to(
-          darkOverlayRef.current,
+          overlayRef.current,
           {
-            opacity: 0.65,
+            opacity: 0.75,
             ease: "none",
           },
           0.2
@@ -179,7 +179,7 @@ export default function Hero() {
     <section
       ref={sectionRef}
       id="hero"
-      className="relative w-full h-screen overflow-hidden bg-[#0A0A09] text-[var(--color-text)] select-none"
+      className="relative w-full h-screen overflow-hidden bg-[var(--color-bg)] text-[var(--color-text)] select-none"
     >
       {/* Background Image 1: Main Editorial Diamond Necklace */}
       <div
@@ -192,16 +192,16 @@ export default function Hero() {
           fill
           priority
           sizes="100vw"
-          className="object-cover object-center brightness-[0.7] contrast-[1.12]"
+          className="object-cover object-center brightness-[0.92] contrast-[1.06]"
         />
-        {/* Soft editorial noir vignette */}
-        <div className="absolute inset-0 bg-gradient-to-t from-[#0A0A09] via-transparent to-[#0A0A09]/75" />
+        {/* Soft editorial atmospheric gradient */}
+        <div className="absolute inset-0 bg-gradient-to-t from-[var(--color-bg)] via-[var(--color-bg)]/20 to-[var(--color-bg)]/60" />
       </div>
 
-      {/* Dark overlay for transition between scenes */}
+      {/* Dynamic theme overlay for transition between scenes */}
       <div
-        ref={darkOverlayRef}
-        className="absolute inset-0 bg-[#0A0A09] opacity-0 pointer-events-none transition-opacity duration-300"
+        ref={overlayRef}
+        className="absolute inset-0 bg-[var(--color-bg)] opacity-0 pointer-events-none transition-opacity duration-300"
       />
 
       {/* Background Image 2: Second piece entering from side */}
@@ -215,10 +215,10 @@ export default function Hero() {
             alt="Aurelia Atelier Solitaire"
             fill
             sizes="(max-width: 768px) 100vw, 60vw"
-            className="object-cover object-center brightness-[0.76] shadow-2xl"
+            className="object-cover object-center brightness-[0.94] shadow-2xl"
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-[#0A0A09] via-transparent to-transparent md:block hidden" />
-          <div className="absolute inset-0 bg-gradient-to-t from-[#0A0A09] via-transparent to-[#0A0A09]/50" />
+          <div className="absolute inset-0 bg-gradient-to-r from-[var(--color-bg)] via-transparent to-transparent md:block hidden" />
+          <div className="absolute inset-0 bg-gradient-to-t from-[var(--color-bg)] via-transparent to-[var(--color-bg)]/40" />
         </div>
       </div>
 
@@ -230,7 +230,7 @@ export default function Hero() {
         {/* Collection Label */}
         <div
           ref={labelRef}
-          className="flex items-center space-x-3 text-[var(--color-gold)] font-cinzel text-xs tracking-[0.35em] uppercase font-light pointer-events-auto"
+          className="flex items-center space-x-3 text-[var(--color-gold)] font-cinzel text-xs tracking-[0.35em] uppercase font-medium pointer-events-auto"
         >
           <span className="w-8 h-[1px] bg-[var(--color-gold)]" />
           <span>AURELIA / 2026 COLLECTION</span>
@@ -240,7 +240,7 @@ export default function Hero() {
         <div className="max-w-3xl my-auto">
           <h1
             ref={heading1Ref}
-            className="font-serif text-5xl sm:text-7xl lg:text-8xl tracking-[0.06em] uppercase font-light leading-[0.98] text-[var(--color-text)] drop-shadow-md"
+            className="font-serif text-5xl sm:text-7xl lg:text-8xl tracking-[0.06em] uppercase font-light leading-[0.98] text-[var(--color-text)] drop-shadow-sm"
           >
             A JEWEL <br />
             WITH A <br />
@@ -253,12 +253,12 @@ export default function Hero() {
           <div ref={ctaRef}>
             <a
               href="#collections"
-              className="btn-editorial btn-editorial-dark group"
+              className="btn-editorial btn-editorial-light group"
               data-cursor
               data-cursor-text="EXPLORE"
             >
               <span className="tracking-[0.25em]">EXPLORE COLLECTION</span>
-              <span className="w-4 h-[1px] bg-[var(--color-gold)] group-hover:w-7 transition-all duration-300" />
+              <span className="w-4 h-[1px] bg-[var(--color-dark)] group-hover:w-7 transition-all duration-300" />
             </a>
           </div>
 
@@ -279,7 +279,7 @@ export default function Hero() {
         className="absolute inset-0 z-20 max-w-7xl mx-auto px-6 sm:px-12 flex flex-col justify-center pointer-events-none"
       >
         <div className="max-w-xl flex flex-col space-y-2 sm:space-y-4">
-          <span className="text-[11px] tracking-[0.4em] uppercase text-[var(--color-gold)] font-cinzel mb-2">
+          <span className="text-[11px] tracking-[0.4em] uppercase text-[var(--color-gold)] font-cinzel mb-2 font-medium">
             The Philosophy of Form
           </span>
 

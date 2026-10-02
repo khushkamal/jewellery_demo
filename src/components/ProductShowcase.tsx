@@ -79,7 +79,7 @@ export default function ProductShowcase() {
     <section
       ref={containerRef}
       id="collections"
-      className="relative w-full min-h-screen bg-[var(--color-bg)] text-[var(--color-text)] py-28 sm:py-36 px-6 sm:px-12 overflow-hidden flex items-center select-none border-t border-[var(--color-border)]"
+      className="relative w-full min-h-screen bg-[var(--color-bg-secondary)] text-[var(--color-text)] py-28 sm:py-36 px-6 sm:px-12 overflow-hidden flex items-center select-none border-t border-[var(--color-border)]"
     >
       {/* Background ambient radial glow */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] bg-[var(--color-gold)]/10 rounded-full blur-[140px] pointer-events-none" />
@@ -88,7 +88,7 @@ export default function ProductShowcase() {
         {/* Section Tag */}
         <div className="flex items-center space-x-3 mb-12 sm:mb-16">
           <Sparkles className="w-3.5 h-3.5 text-[var(--color-gold)]" />
-          <span className="text-[10px] tracking-[0.4em] uppercase text-[var(--color-gold)] font-cinzel">
+          <span className="text-[10px] tracking-[0.4em] uppercase text-[var(--color-gold)] font-cinzel font-medium">
             Immersive Showcase / Master Creation
           </span>
         </div>
@@ -118,20 +118,20 @@ export default function ProductShowcase() {
               data-cursor-text="DISCOVER"
               onClick={() => setActiveQuickViewProduct(celesteProduct)}
             >
-              <div className="relative w-full h-full overflow-hidden shadow-[0_25px_60px_-15px_rgba(0,0,0,0.95)] border border-[var(--color-border)] bg-[var(--color-surface)]">
+              <div className="relative w-full h-full overflow-hidden shadow-[0_25px_60px_-15px_rgba(0,0,0,0.18)] border border-[var(--color-border)] bg-[var(--color-surface)]">
                 <Image
                   src="https://images.unsplash.com/photo-1599643477877-530eb83abc8e?auto=format&fit=crop&w=1800&q=88"
                   alt="The Celeste High Jewellery Diamond Necklace"
                   fill
                   sizes="(max-width: 768px) 100vw, 500px"
-                  className="object-cover object-center group-hover:scale-105 transition-transform duration-700 ease-out brightness-[0.9]"
+                  className="object-cover object-center group-hover:scale-105 transition-transform duration-700 ease-out brightness-[0.96]"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#0A0A09]/80 via-transparent to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-[var(--color-dark)]/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               </div>
 
               {/* Floating Specification Label */}
-              <div className="absolute -bottom-4 -left-4 sm:-bottom-6 sm:-left-6 bg-[var(--color-bg-secondary)] border border-[var(--color-gold)]/40 px-5 py-3 shadow-2xl backdrop-blur-md">
-                <span className="text-[9px] tracking-[0.3em] font-cinzel text-[var(--color-gold)] uppercase block">
+              <div className="absolute -bottom-4 -left-4 sm:-bottom-6 sm:-left-6 bg-[var(--color-surface)] border border-[var(--color-gold)]/40 px-5 py-3 shadow-xl backdrop-blur-md">
+                <span className="text-[9px] tracking-[0.3em] font-cinzel text-[var(--color-gold)] uppercase block font-medium">
                   Grade VVS1
                 </span>
                 <span className="text-xs font-serif italic text-[var(--color-text)] tracking-wider">
@@ -181,7 +181,7 @@ export default function ProductShowcase() {
             <div className="pt-2 flex flex-col sm:flex-row lg:flex-col gap-4">
               <button
                 onClick={() => setActiveQuickViewProduct(celesteProduct)}
-                className="btn-editorial btn-editorial-dark w-full justify-between group"
+                className="btn-editorial btn-editorial-light w-full justify-between group"
                 data-cursor
                 data-cursor-text="VIEW"
               >
@@ -191,7 +191,7 @@ export default function ProductShowcase() {
 
               <button
                 onClick={() => addToCart(celesteProduct)}
-                className="w-full py-3.5 bg-[var(--color-gold)] hover:bg-[#F5F2EB] text-[#0A0A09] text-[10px] tracking-[0.25em] font-cinzel uppercase font-semibold transition-colors duration-300 text-center"
+                className="w-full py-3.5 bg-[var(--color-dark)] hover:bg-[var(--color-gold)] text-[var(--color-bg)] text-[10px] tracking-[0.25em] font-cinzel uppercase font-semibold transition-colors duration-300 text-center shadow-md"
               >
                 Acquire For Bag
               </button>

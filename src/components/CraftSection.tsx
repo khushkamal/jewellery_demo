@@ -77,7 +77,7 @@ export default function CraftSection() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
           {/* Left Column: Heading and Craft Narrative */}
           <div className="lg:col-span-5 flex flex-col space-y-8">
-            <span className="text-[10px] tracking-[0.4em] uppercase text-[var(--color-gold)] font-cinzel">
+            <span className="text-[10px] tracking-[0.4em] uppercase text-[var(--color-gold)] font-cinzel font-medium">
               The Artisan Atelier
             </span>
 
@@ -125,20 +125,20 @@ export default function CraftSection() {
                   alt="Goldsmith workbench and hand gem-setting"
                   fill
                   sizes="(max-width: 1024px) 100vw, 60vw"
-                  className="object-cover object-center brightness-[0.78] contrast-[1.08]"
+                  className="object-cover object-center brightness-[0.92] contrast-[1.05]"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#0A0A09]/85 via-transparent to-[#0A0A09]/40" />
+                <div className="absolute inset-0 bg-gradient-to-t from-[var(--color-dark)]/40 via-transparent to-transparent" />
               </div>
 
               {/* Editorial Floating Label 1: Top Right */}
               <div
                 ref={label1Ref}
-                className="absolute top-8 right-8 z-20 bg-[var(--color-bg-secondary)]/85 backdrop-blur-md border border-[var(--color-border)] p-4 max-w-[200px]"
+                className="absolute top-8 right-8 z-20 bg-[var(--color-surface)]/95 backdrop-blur-md border border-[var(--color-border)] p-4 max-w-[200px] shadow-lg"
               >
-                <span className="text-[10px] tracking-[0.35em] font-cinzel text-[var(--color-gold)] uppercase block font-medium">
+                <span className="text-[10px] tracking-[0.35em] font-cinzel text-[var(--color-gold)] uppercase block font-semibold">
                   18K GOLD
                 </span>
-                <span className="text-[11px] font-sans text-[var(--color-text-secondary)] mt-1 block">
+                <span className="text-[11px] font-sans text-[var(--color-text-secondary)] mt-1 block leading-snug">
                   Solid 750/1000 alloy formulated for eternal warmth.
                 </span>
               </div>
@@ -146,12 +146,12 @@ export default function CraftSection() {
               {/* Editorial Floating Label 2: Mid Left */}
               <div
                 ref={label2Ref}
-                className="absolute top-1/2 -translate-y-1/2 left-8 z-20 bg-[var(--color-bg-secondary)]/85 backdrop-blur-md border border-[var(--color-border)] p-4 max-w-[220px]"
+                className="absolute top-1/2 -translate-y-1/2 left-8 z-20 bg-[var(--color-surface)]/95 backdrop-blur-md border border-[var(--color-border)] p-4 max-w-[220px] shadow-lg"
               >
-                <span className="text-[10px] tracking-[0.35em] font-cinzel text-[var(--color-gold)] uppercase block font-medium">
+                <span className="text-[10px] tracking-[0.35em] font-cinzel text-[var(--color-gold)] uppercase block font-semibold">
                   HAND FINISHED
                 </span>
-                <span className="text-[11px] font-sans text-[var(--color-text-secondary)] mt-1 block">
+                <span className="text-[11px] font-sans text-[var(--color-text-secondary)] mt-1 block leading-snug">
                   Every claw, bezel and link mirror-buffed by senior lapidaries.
                 </span>
               </div>
@@ -159,12 +159,12 @@ export default function CraftSection() {
               {/* Editorial Floating Label 3: Bottom Right */}
               <div
                 ref={label3Ref}
-                className="absolute bottom-8 right-8 z-20 bg-[var(--color-bg-secondary)]/85 backdrop-blur-md border border-[var(--color-border)] p-4 max-w-[220px]"
+                className="absolute bottom-8 right-8 z-20 bg-[var(--color-surface)]/95 backdrop-blur-md border border-[var(--color-border)] p-4 max-w-[220px] shadow-lg"
               >
-                <span className="text-[10px] tracking-[0.35em] font-cinzel text-[var(--color-gold)] uppercase block font-medium">
+                <span className="text-[10px] tracking-[0.35em] font-cinzel text-[var(--color-gold)] uppercase block font-semibold">
                   NATURAL DIAMONDS
                 </span>
-                <span className="text-[11px] font-sans text-[var(--color-text-secondary)] mt-1 block">
+                <span className="text-[11px] font-sans text-[var(--color-text-secondary)] mt-1 block leading-snug">
                   Hand-selected for fluorescence and microscopic clarity.
                 </span>
               </div>
