@@ -95,9 +95,9 @@ export const SIGNATURE_PRODUCTS: Product[] = [
       "A seamless organic cuff beaten by master metalsmiths, finished with a subtle pavé diamond hinge mechanism.",
     material: "18K Solid Gold, 0.95ct Brilliant Diamonds",
     image:
-      "https://images.unsplash.com/photo-1611591475152-4735492d5395?auto=format&fit=crop&w=1600&q=85",
+      "https://images.unsplash.com/photo-1598560917505-59a3ad559071?auto=format&fit=crop&w=1600&q=85",
     secondaryImage:
-      "https://images.unsplash.com/photo-1599643477877-530eb83abc8e?auto=format&fit=crop&w=1600&q=85",
+      "https://images.unsplash.com/photo-1602751584552-8ba73aad10e1?auto=format&fit=crop&w=1600&q=85",
     tag: "Timeless Icon",
     specifications: {
       metal: "18K Solid Heavy Gold (38g)",
@@ -186,9 +186,9 @@ export const FEATURED_GRID_PRODUCTS: Product[] = [
       "A fluid river of graduated round diamonds nestled in individual hand-sculpted gold cups.",
     material: "18K Rose & Yellow Gold, 1.60ct Diamonds",
     image:
-      "https://images.unsplash.com/photo-1611591475152-4735492d5395?auto=format&fit=crop&w=1400&q=85",
+      "https://images.unsplash.com/photo-1602751584552-8ba73aad10e1?auto=format&fit=crop&w=1600&q=85",
     secondaryImage:
-      "https://images.unsplash.com/photo-1599643477877-530eb83abc8e?auto=format&fit=crop&w=1400&q=85",
+      "https://images.unsplash.com/photo-1598560917505-59a3ad559071?auto=format&fit=crop&w=1600&q=85",
     tag: "Limited Batch",
     specifications: {
       metal: "18K Rose Gold",
