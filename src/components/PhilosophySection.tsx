@@ -40,7 +40,7 @@ export default function PhilosophySection() {
   return (
     <section
       ref={containerRef}
-      className="relative w-full min-h-[110vh] py-28 sm:py-40 md:py-48 flex flex-col justify-center overflow-hidden bg-[#071510] transition-colors select-none border-t border-[var(--color-border)]"
+      className="relative w-full min-h-[110vh] py-28 sm:py-40 md:py-48 flex flex-col justify-center overflow-hidden bg-[#0B4745] transition-colors select-none border-t border-[var(--color-border)]"
     >
       <div className="w-full max-w-full overflow-hidden flex flex-col space-y-3 sm:space-y-6 md:space-y-8 will-change-transform">
         {/* Line 1 */}
@@ -48,7 +48,7 @@ export default function PhilosophySection() {
           ref={line1Ref}
           className="whitespace-nowrap flex items-center space-x-4 sm:space-x-10 pl-4 sm:pl-16"
         >
-          <span className="font-serif text-4xl sm:text-6xl md:text-8xl lg:text-[9.5rem] tracking-[0.03em] uppercase font-light text-[#F5F7F2] leading-none">
+          <span className="font-serif text-4xl sm:text-6xl md:text-8xl lg:text-[9.5rem] tracking-[0.03em] uppercase font-light text-[#FBF2E1] leading-none">
             JEWELLERY
           </span>
           <span className="font-serif italic text-3xl sm:text-5xl md:text-7xl text-[var(--color-gold)]">
@@ -77,7 +77,7 @@ export default function PhilosophySection() {
           ref={line3Ref}
           className="whitespace-nowrap flex items-center space-x-4 sm:space-x-10 pl-6 sm:pl-28"
         >
-          <span className="font-serif text-4xl sm:text-6xl md:text-8xl lg:text-[9.5rem] tracking-[0.03em] uppercase font-light text-[#F5F7F2] leading-none">
+          <span className="font-serif text-4xl sm:text-6xl md:text-8xl lg:text-[9.5rem] tracking-[0.03em] uppercase font-light text-[#FBF2E1] leading-none">
             LIKE A PART
           </span>
           <span className="w-16 sm:w-40 h-[1px] bg-[var(--color-border)]" />
@@ -91,7 +91,7 @@ export default function PhilosophySection() {
           <span className="font-cinzel text-[10px] sm:text-xs tracking-[0.4em] uppercase text-[var(--color-text-secondary)]">
             HAUTE JOAILLERIE
           </span>
-          <span className="font-serif text-4xl sm:text-6xl md:text-8xl lg:text-[9.5rem] tracking-[0.03em] uppercase font-light text-[#F5F7F2] leading-none">
+          <span className="font-serif text-4xl sm:text-6xl md:text-8xl lg:text-[9.5rem] tracking-[0.03em] uppercase font-light text-[#FBF2E1] leading-none">
             OF YOU.
           </span>
         </div>

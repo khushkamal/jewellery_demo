@@ -59,7 +59,7 @@ export default function CollectionIntro() {
     <section
       ref={containerRef}
       id="collection-intro"
-      className="relative w-full bg-[#071510] text-[#F5F7F2] py-24 sm:py-36 md:py-44 px-5 sm:px-10 overflow-hidden border-t border-[var(--color-border)]"
+      className="relative w-full bg-[#0B4745] text-[#FBF2E1] py-24 sm:py-36 md:py-44 px-5 sm:px-10 overflow-hidden border-t border-[var(--color-border)]"
     >
       <div className="max-w-7xl mx-auto">
         {/* Editorial Subtitle */}
@@ -76,7 +76,7 @@ export default function CollectionIntro() {
           <div className="lg:col-span-7">
             <h2
               ref={headingRef}
-              className="font-serif text-4xl sm:text-6xl md:text-7xl lg:text-8xl tracking-[0.04em] uppercase font-light leading-[1.02] text-[#F5F7F2]"
+              className="font-serif text-4xl sm:text-6xl md:text-7xl lg:text-8xl tracking-[0.04em] uppercase font-light leading-[1.02] text-[#FBF2E1]"
             >
               THE NEW <br />
               <span className="italic font-normal text-[var(--color-gold)]">COLLECTION</span>
@@ -87,7 +87,7 @@ export default function CollectionIntro() {
           <div className="lg:col-span-5 flex flex-col justify-between pt-2 lg:pt-6 space-y-6 sm:space-y-8">
             <p
               ref={paragraphRef}
-              className="font-serif text-xl sm:text-2xl md:text-3xl text-[#F5F7F2]/90 font-light leading-snug italic"
+              className="font-serif text-xl sm:text-2xl md:text-3xl text-[#FBF2E1]/90 font-light leading-snug italic"
             >
               &ldquo;Jewels designed around light, proportion and quiet expression.&rdquo;
             </p>
@@ -105,7 +105,7 @@ export default function CollectionIntro() {
                 <a
                   ref={linkRef}
                   href="#signature"
-                  className="group inline-flex items-center space-x-3 text-xs tracking-[0.25em] uppercase font-cinzel text-[#F5F7F2] hover:text-[var(--color-gold)] transition-colors"
+                  className="group inline-flex items-center space-x-3 text-xs tracking-[0.25em] uppercase font-cinzel text-[#FBF2E1] hover:text-[var(--color-gold)] transition-colors"
                   data-cursor
                   data-cursor-text="DISCOVER"
                 >

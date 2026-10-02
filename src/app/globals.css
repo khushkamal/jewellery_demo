@@ -1,19 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap');
 @import "tailwindcss";
 
-/* Regal Emerald & Heirloom Polki Gold (Permanent Theme) */
+/* Regal Emerald (#0B4745), Ivory Silk (#FBF2E1) & Heirloom Gold (#D2B68A) */
 :root {
-  --color-bg: #071510;
-  --color-bg-secondary: #0D201A;
-  --color-surface: #132B23;
-  --color-surface-subtle: #19382E;
-  --color-dark: #040A08;
-  --color-gold: #D4AF37;
-  --color-gold-muted: #A88624;
-  --color-text: #F5F7F2;
-  --color-text-secondary: #96ABA0;
-  --color-border: rgba(212, 175, 55, 0.18);
-  --color-border-subtle: rgba(245, 247, 242, 0.08);
+  --color-bg: #0B4745;
+  --color-bg-secondary: #083735;
+  --color-surface: #0E5653;
+  --color-surface-subtle: #126562;
+  --color-dark: #052625;
+  --color-gold: #D2B68A;
+  --color-gold-muted: #B89B6C;
+  --color-text: #FBF2E1;
+  --color-text-secondary: #D1C7B4;
+  --color-border: rgba(210, 182, 138, 0.22);
+  --color-border-subtle: rgba(251, 242, 225, 0.1);
 }
 
 @theme {
@@ -71,7 +71,7 @@ body {
 
 ::selection {
   background-color: var(--color-gold);
-  color: #071510;
+  color: #0B4745;
 }
 
 /* Luxury Editorial Typography Classes */
@@ -142,7 +142,7 @@ body {
 
 .btn-editorial-light:hover {
   background: var(--color-gold);
-  color: #071510;
+  color: #0B4745;
   border-color: var(--color-gold);
 }
 
@@ -154,6 +154,6 @@ body {
 
 .btn-editorial-dark:hover {
   background: var(--color-gold);
-  color: #071510;
+  color: #0B4745;
   border-color: var(--color-gold);
 }

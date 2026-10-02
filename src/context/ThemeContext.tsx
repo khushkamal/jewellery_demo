@@ -30,14 +30,9 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
     }
   }, []);
 
-  const applyTheme = (t: ThemeType) => {
+  const applyTheme = (_t?: ThemeType) => {
     const root = document.documentElement;
-    if (t === "ivory") {
-      // Default light theme lives in :root
-      root.removeAttribute("data-theme");
-    } else {
-      root.setAttribute("data-theme", t);
-    }
+    root.removeAttribute("data-theme");
   };
 
   const setTheme = (newTheme: ThemeType) => {

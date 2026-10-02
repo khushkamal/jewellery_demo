@@ -46,7 +46,7 @@ export default function Navbar() {
       <header
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
           isScrolled
-            ? "bg-[#071510]/90 backdrop-blur-md border-b border-[var(--color-border)] py-4 shadow-2xl"
+            ? "bg-[#0B4745]/90 backdrop-blur-md border-b border-[var(--color-border)] py-4 shadow-2xl"
             : "bg-transparent py-6 sm:py-8"
         }`}
       >
@@ -126,7 +126,7 @@ export default function Navbar() {
             >
               <Heart className="w-4 h-4 stroke-[1.4]" />
               {wishlist.length > 0 && (
-                <span className="absolute -top-0.5 -right-0.5 w-3.5 h-3.5 bg-[var(--color-gold)] text-[#071510] text-[8px] font-sans font-bold rounded-full flex items-center justify-center">
+                <span className="absolute -top-0.5 -right-0.5 w-3.5 h-3.5 bg-[var(--color-gold)] text-[#0B4745] text-[8px] font-sans font-bold rounded-full flex items-center justify-center">
                   {wishlist.length}
                 </span>
               )}
@@ -148,7 +148,7 @@ export default function Navbar() {
 
         {/* Expandable Luxury Search Bar */}
         {isSearchOpen && (
-          <div className="w-full bg-[#0D201A] text-[var(--color-text)] py-4 px-6 border-t border-[var(--color-border)] animate-in fade-in slide-in-from-top-2 duration-300 shadow-2xl">
+          <div className="w-full bg-[#083735] text-[var(--color-text)] py-4 px-6 border-t border-[var(--color-border)] animate-in fade-in slide-in-from-top-2 duration-300 shadow-2xl">
             <div className="max-w-3xl mx-auto flex items-center justify-between">
               <input
                 type="text"
@@ -171,7 +171,7 @@ export default function Navbar() {
 
       {/* Mobile Slide-over Navigation */}
       {mobileMenuOpen && (
-        <div className="fixed inset-0 z-[60] bg-[#071510] text-[var(--color-text)] flex flex-col justify-between p-8 md:hidden animate-in fade-in duration-300">
+        <div className="fixed inset-0 z-[60] bg-[#0B4745] text-[var(--color-text)] flex flex-col justify-between p-8 md:hidden animate-in fade-in duration-300">
           <div className="flex justify-between items-center border-b border-[var(--color-border)] pb-6">
             <span className="font-serif text-2xl tracking-[0.25em] uppercase text-[var(--color-text)]">
               AURELIA

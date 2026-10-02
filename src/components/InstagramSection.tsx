@@ -23,7 +23,7 @@ function InstagramIcon({ className = "w-4 h-4" }: { className?: string }) {
 
 export default function InstagramSection() {
   return (
-    <section className="relative w-full bg-[#0D201A] text-[#F5F7F2] py-20 sm:py-32 px-5 sm:px-10 border-t border-[var(--color-border)]">
+    <section className="relative w-full bg-[#083735] text-[#FBF2E1] py-20 sm:py-32 px-5 sm:px-10 border-t border-[var(--color-border)]">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="flex flex-col sm:flex-row sm:items-end justify-between mb-10 sm:mb-14 gap-4">
@@ -31,7 +31,7 @@ export default function InstagramSection() {
             <span className="text-[10px] tracking-[0.4em] uppercase text-[var(--color-gold)] font-cinzel block mb-2 font-medium">
               Visual Archives
             </span>
-            <h2 className="font-serif text-3xl sm:text-5xl lg:text-6xl tracking-[0.05em] uppercase font-light text-[#F5F7F2]">
+            <h2 className="font-serif text-3xl sm:text-5xl lg:text-6xl tracking-[0.05em] uppercase font-light text-[#FBF2E1]">
               FOLLOW THE LIGHT
             </h2>
           </div>
@@ -40,7 +40,7 @@ export default function InstagramSection() {
             href="https://instagram.com"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-xs tracking-[0.25em] uppercase font-cinzel text-[#F5F7F2] hover:text-[var(--color-gold)] transition-colors editorial-link self-start sm:self-auto"
+            className="text-xs tracking-[0.25em] uppercase font-cinzel text-[#FBF2E1] hover:text-[var(--color-gold)] transition-colors editorial-link self-start sm:self-auto"
           >
             @AURELIAJEWELS
           </a>
@@ -51,7 +51,7 @@ export default function InstagramSection() {
           {CAMPAIGN_GALLERY.map((item) => (
             <div
               key={item.id}
-              className="group relative aspect-[3/4] overflow-hidden bg-[#132B23] border border-[var(--color-border)] cursor-pointer"
+              className="group relative aspect-[3/4] overflow-hidden bg-[#0E5653] border border-[var(--color-border)] cursor-pointer"
               data-cursor
               data-cursor-text="EXP"
             >
@@ -64,7 +64,7 @@ export default function InstagramSection() {
               />
 
               {/* Minimal Dark Hover Overlay with Subtle Instagram Icon */}
-              <div className="absolute inset-0 bg-[#071510]/70 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-between p-3.5 sm:p-4 text-[#F5F7F2]">
+              <div className="absolute inset-0 bg-[#0B4745]/70 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-between p-3.5 sm:p-4 text-[#FBF2E1]">
                 <div className="self-end">
                   <InstagramIcon className="w-4 h-4 text-[var(--color-gold)]" />
                 </div>
@@ -72,7 +72,7 @@ export default function InstagramSection() {
                   <span className="text-[8px] sm:text-[9px] tracking-widest uppercase font-cinzel text-[var(--color-gold)] block">
                     {item.caption}
                   </span>
-                  <span className="text-xs font-serif italic text-[#F5F7F2]">
+                  <span className="text-xs font-serif italic text-[#FBF2E1]">
                     {item.title}
                   </span>
                 </div>

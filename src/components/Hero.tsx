@@ -178,7 +178,7 @@ export default function Hero() {
     <section
       ref={sectionRef}
       id="hero"
-      className="relative w-full h-screen overflow-hidden bg-[#071510] text-[#F5F7F2] select-none"
+      className="relative w-full h-screen overflow-hidden bg-[#0B4745] text-[#FBF2E1] select-none"
     >
       {/* Background Image 1: Main Editorial Diamond & Emerald Necklace */}
       <div
@@ -194,13 +194,13 @@ export default function Hero() {
           className="object-cover object-center brightness-[0.72] contrast-[1.12]"
         />
         {/* Soft editorial emerald atmospheric vignette */}
-        <div className="absolute inset-0 bg-gradient-to-t from-[#071510] via-transparent to-[#071510]/80" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#0B4745] via-transparent to-[#0B4745]/80" />
       </div>
 
       {/* Dynamic theme overlay for transition between scenes */}
       <div
         ref={overlayRef}
-        className="absolute inset-0 bg-[#071510] opacity-0 pointer-events-none transition-opacity duration-300"
+        className="absolute inset-0 bg-[#0B4745] opacity-0 pointer-events-none transition-opacity duration-300"
       />
 
       {/* Background Image 2: Second piece entering from side */}
@@ -216,8 +216,8 @@ export default function Hero() {
             sizes="(max-width: 768px) 100vw, 60vw"
             className="object-cover object-center brightness-[0.78] shadow-2xl"
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-[#071510] via-transparent to-transparent md:block hidden" />
-          <div className="absolute inset-0 bg-gradient-to-t from-[#071510] via-transparent to-[#071510]/55" />
+          <div className="absolute inset-0 bg-gradient-to-r from-[#0B4745] via-transparent to-transparent md:block hidden" />
+          <div className="absolute inset-0 bg-gradient-to-t from-[#0B4745] via-transparent to-[#0B4745]/55" />
         </div>
       </div>
 
@@ -236,7 +236,7 @@ export default function Hero() {
         <div className="max-w-3xl my-auto">
           <h1
             ref={heading1Ref}
-            className="font-serif text-4xl sm:text-6xl md:text-7xl lg:text-8xl tracking-[0.05em] uppercase font-light leading-[1.0] text-[#F5F7F2] drop-shadow-md"
+            className="font-serif text-4xl sm:text-6xl md:text-7xl lg:text-8xl tracking-[0.05em] uppercase font-light leading-[1.0] text-[#FBF2E1] drop-shadow-md"
           >
             A JEWEL <br />
             WITH A <br />
@@ -282,7 +282,7 @@ export default function Hero() {
           <div className="overflow-hidden">
             <span
               ref={formWordRef}
-              className="block font-serif text-4xl sm:text-6xl md:text-7xl lg:text-8xl tracking-[0.06em] uppercase font-light text-[#F5F7F2] leading-[0.98]"
+              className="block font-serif text-4xl sm:text-6xl md:text-7xl lg:text-8xl tracking-[0.06em] uppercase font-light text-[#FBF2E1] leading-[0.98]"
             >
               FORM.
             </span>
@@ -300,7 +300,7 @@ export default function Hero() {
           <div className="overflow-hidden">
             <span
               ref={legacyWordRef}
-              className="block font-serif text-4xl sm:text-6xl md:text-7xl lg:text-8xl tracking-[0.06em] uppercase font-light text-[#F5F7F2] leading-[0.98]"
+              className="block font-serif text-4xl sm:text-6xl md:text-7xl lg:text-8xl tracking-[0.06em] uppercase font-light text-[#FBF2E1] leading-[0.98]"
             >
               LEGACY.
             </span>

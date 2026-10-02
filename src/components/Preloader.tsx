@@ -89,7 +89,7 @@ export default function Preloader({ onComplete }: PreloaderProps) {
   return (
     <div
       ref={containerRef}
-      className="fixed inset-0 z-[99998] flex flex-col items-center justify-center bg-[#FAF7F2] text-[#161412] select-none"
+      className="fixed inset-0 z-[99998] flex flex-col items-center justify-center bg-[#0B4745] text-[#FBF2E1] select-none"
     >
       <div className="flex flex-col items-center text-center px-6 max-w-md">
         {/* Monogram / Brand mark */}
@@ -97,29 +97,29 @@ export default function Preloader({ onComplete }: PreloaderProps) {
           ref={textRef}
           className="mb-4 flex flex-col items-center space-y-1"
         >
-          <span className="text-[10px] tracking-[0.4em] uppercase text-[#B38F4D] font-cinzel">
+          <span className="text-[10px] tracking-[0.4em] uppercase text-[#D2B68A] font-cinzel">
             Haute Joaillerie
           </span>
-          <h1 className="font-serif text-3xl sm:text-4xl md:text-5xl tracking-[0.25em] uppercase font-light text-[#161412]">
+          <h1 className="font-serif text-3xl sm:text-4xl md:text-5xl tracking-[0.25em] uppercase font-light text-[#FBF2E1]">
             AURELIA
           </h1>
-          <span className="font-cinzel text-xs sm:text-sm tracking-[0.5em] uppercase text-[#B38F4D] font-light">
+          <span className="font-cinzel text-xs sm:text-sm tracking-[0.5em] uppercase text-[#D2B68A] font-light">
             JEWELS
           </span>
         </div>
 
         {/* Animated Progress Line */}
-        <div className="w-24 sm:w-32 h-[1px] bg-[#EBE3D6] overflow-hidden my-3 relative">
+        <div className="w-24 sm:w-32 h-[1px] bg-[#D2B68A]/25 overflow-hidden my-3 relative">
           <div
             ref={lineRef}
-            className="absolute inset-0 bg-[#B38F4D]"
+            className="absolute inset-0 bg-[#D2B68A]"
           />
         </div>
 
         {/* Tagline */}
         <p
           ref={taglineRef}
-          className="font-serif italic text-xs sm:text-sm tracking-[0.15em] text-[#6B645B]"
+          className="font-serif italic text-xs sm:text-sm tracking-[0.15em] text-[#D1C7B4]"
         >
           &ldquo;Crafted to be Remembered.&rdquo;
         </p>

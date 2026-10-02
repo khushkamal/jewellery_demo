@@ -68,7 +68,7 @@ export default function BespokeSection() {
     <section
       ref={containerRef}
       id="bespoke"
-      className="relative w-full bg-[#071510] text-[#F5F7F2] py-28 sm:py-40 md:py-44 px-5 sm:px-10 overflow-hidden border-t border-[var(--color-border)]"
+      className="relative w-full bg-[#0B4745] text-[#FBF2E1] py-28 sm:py-40 md:py-44 px-5 sm:px-10 overflow-hidden border-t border-[var(--color-border)]"
     >
       <div className="max-w-7xl mx-auto">
         {/* Animated Thin Gold Line across the section */}
@@ -85,13 +85,13 @@ export default function BespokeSection() {
 
             <h2
               ref={headingRef}
-              className="font-serif text-4xl sm:text-6xl md:text-7xl lg:text-8xl tracking-[0.05em] uppercase font-light leading-[0.95] text-[#F5F7F2]"
+              className="font-serif text-4xl sm:text-6xl md:text-7xl lg:text-8xl tracking-[0.05em] uppercase font-light leading-[0.95] text-[#FBF2E1]"
             >
               MADE <br />
               <span className="italic font-normal text-[var(--color-gold)]">FOR YOU.</span>
             </h2>
 
-            <p className="font-serif text-xl sm:text-2xl text-[#F5F7F2]/90 font-light leading-relaxed max-w-lg italic">
+            <p className="font-serif text-xl sm:text-2xl text-[#FBF2E1]/90 font-light leading-relaxed max-w-lg italic">
               &ldquo;From first sketch to final polish, create a piece that is
               uniquely yours.&rdquo;
             </p>
@@ -119,7 +119,7 @@ export default function BespokeSection() {
           {/* Right Column: Atelier Still Life Photography */}
           <div className="lg:col-span-6">
             <div
-              className="relative w-full h-[400px] sm:h-[540px] bg-[#132B23] overflow-hidden shadow-2xl border border-[var(--color-border)]"
+              className="relative w-full h-[400px] sm:h-[540px] bg-[#0E5653] overflow-hidden shadow-2xl border border-[var(--color-border)]"
               data-cursor
               data-cursor-text="SKETCH"
             >
@@ -130,13 +130,13 @@ export default function BespokeSection() {
                 sizes="(max-width: 1024px) 100vw, 50vw"
                 className="object-cover object-center brightness-[0.88]"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#071510]/60 via-transparent to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#0B4745]/60 via-transparent to-transparent" />
 
-              <div className="absolute bottom-4 right-4 sm:bottom-6 sm:right-6 bg-[#0D201A]/90 backdrop-blur-md px-4 py-2.5 sm:px-5 sm:py-3 border border-[var(--color-border)] text-right">
+              <div className="absolute bottom-4 right-4 sm:bottom-6 sm:right-6 bg-[#083735]/90 backdrop-blur-md px-4 py-2.5 sm:px-5 sm:py-3 border border-[var(--color-border)] text-right">
                 <span className="text-[8px] sm:text-[9px] tracking-[0.3em] font-cinzel text-[var(--color-gold)] uppercase block font-medium">
                   Studio Archive
                 </span>
-                <span className="text-xs font-serif italic text-[#F5F7F2]">
+                <span className="text-xs font-serif italic text-[#FBF2E1]">
                   Original Watercolor Gouache No. 248
                 </span>
               </div>
@@ -147,11 +147,11 @@ export default function BespokeSection() {
 
       {/* Bespoke Private Consultation Modal */}
       {isConsultOpen && (
-        <div className="fixed inset-0 z-[100] bg-[#071510]/85 backdrop-blur-md flex items-center justify-center p-4 sm:p-6 animate-in fade-in duration-300">
-          <div className="relative w-full max-w-lg bg-[#0D201A] text-[#F5F7F2] p-6 sm:p-10 border border-[var(--color-border)] shadow-2xl">
+        <div className="fixed inset-0 z-[100] bg-[#0B4745]/85 backdrop-blur-md flex items-center justify-center p-4 sm:p-6 animate-in fade-in duration-300">
+          <div className="relative w-full max-w-lg bg-[#083735] text-[#FBF2E1] p-6 sm:p-10 border border-[var(--color-border)] shadow-2xl">
             <button
               onClick={() => setIsConsultOpen(false)}
-              className="absolute top-5 right-5 text-xs tracking-widest font-cinzel uppercase text-[var(--color-text-secondary)] hover:text-[#F5F7F2]"
+              className="absolute top-5 right-5 text-xs tracking-widest font-cinzel uppercase text-[var(--color-text-secondary)] hover:text-[#FBF2E1]"
             >
               Close [✕]
             </button>
@@ -173,7 +173,7 @@ export default function BespokeSection() {
                   <span className="text-[10px] tracking-[0.35em] uppercase text-[var(--color-gold)] font-cinzel block mb-1 font-medium">
                     Private Commission
                   </span>
-                  <h3 className="font-serif text-2xl sm:text-3xl uppercase tracking-wider text-[#F5F7F2]">
+                  <h3 className="font-serif text-2xl sm:text-3xl uppercase tracking-wider text-[#FBF2E1]">
                     Reserve Bespoke Salon
                   </h3>
                 </div>
@@ -187,7 +187,7 @@ export default function BespokeSection() {
                       type="text"
                       required
                       placeholder="e.g. Lady Katherine Roy"
-                      className="w-full bg-[#132B23] border border-[var(--color-border)] p-3 text-sm focus:outline-none focus:border-[var(--color-gold)] font-serif text-[#F5F7F2]"
+                      className="w-full bg-[#0E5653] border border-[var(--color-border)] p-3 text-sm focus:outline-none focus:border-[var(--color-gold)] font-serif text-[#FBF2E1]"
                     />
                   </div>
 
@@ -199,7 +199,7 @@ export default function BespokeSection() {
                       type="text"
                       required
                       placeholder="+91 98200 00000 or email"
-                      className="w-full bg-[#132B23] border border-[var(--color-border)] p-3 text-sm focus:outline-none focus:border-[var(--color-gold)] font-serif text-[#F5F7F2]"
+                      className="w-full bg-[#0E5653] border border-[var(--color-border)] p-3 text-sm focus:outline-none focus:border-[var(--color-gold)] font-serif text-[#FBF2E1]"
                     />
                   </div>
 
@@ -207,7 +207,7 @@ export default function BespokeSection() {
                     <label className="text-[9px] tracking-[0.2em] uppercase font-cinzel block text-[var(--color-text-secondary)] mb-1">
                       Jewellery Category
                     </label>
-                    <select className="w-full bg-[#132B23] border border-[var(--color-border)] p-3 text-sm focus:outline-none focus:border-[var(--color-gold)] font-serif text-[#F5F7F2]">
+                    <select className="w-full bg-[#0E5653] border border-[var(--color-border)] p-3 text-sm focus:outline-none focus:border-[var(--color-gold)] font-serif text-[#FBF2E1]">
                       <option>High Jewellery Emerald Necklace</option>
                       <option>Engagement / Solitaire Ring</option>
                       <option>Royal Bridal Parure</option>
@@ -218,7 +218,7 @@ export default function BespokeSection() {
 
                 <button
                   type="submit"
-                  className="w-full py-3.5 sm:py-4 bg-[var(--color-gold)] text-[#071510] text-[10px] tracking-[0.3em] font-cinzel uppercase font-semibold hover:bg-[#F5F7F2] transition-colors shadow-lg"
+                  className="w-full py-3.5 sm:py-4 bg-[var(--color-gold)] text-[#0B4745] text-[10px] tracking-[0.3em] font-cinzel uppercase font-semibold hover:bg-[#FBF2E1] transition-colors shadow-lg"
                 >
                   Submit Private Request
                 </button>

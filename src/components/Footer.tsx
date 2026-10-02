@@ -8,7 +8,7 @@ export default function Footer() {
   };
 
   return (
-    <footer className="relative w-full bg-[#040A08] text-[#F5F7F2] pt-20 sm:pt-28 pb-10 sm:pb-12 px-5 sm:px-10 select-none border-t border-[var(--color-border)]">
+    <footer className="relative w-full bg-[#052625] text-[#FBF2E1] pt-20 sm:pt-28 pb-10 sm:pb-12 px-5 sm:px-10 select-none border-t border-[var(--color-border)]">
       <div className="max-w-7xl mx-auto">
         {/* Top: Massive Editorial Brandmark */}
         <div className="border-b border-[var(--color-border)] pb-14 sm:pb-20">
@@ -17,13 +17,13 @@ export default function Footer() {
               <span className="text-[10px] tracking-[0.45em] uppercase text-[var(--color-gold)] font-cinzel block mb-2 font-medium">
                 Fine Jewellery Maison
               </span>
-              <h2 className="font-serif text-5xl sm:text-7xl md:text-8xl lg:text-9xl tracking-[0.16em] uppercase font-light leading-none text-[#F5F7F2]">
+              <h2 className="font-serif text-5xl sm:text-7xl md:text-8xl lg:text-9xl tracking-[0.16em] uppercase font-light leading-none text-[#FBF2E1]">
                 AURELIA
               </h2>
             </div>
 
             <div className="flex flex-col items-start md:items-end text-left md:text-right">
-              <p className="font-serif italic text-base sm:text-xl text-[#F5F7F2]/80">
+              <p className="font-serif italic text-base sm:text-xl text-[#FBF2E1]/80">
                 &ldquo;Crafted to be Remembered.&rdquo;
               </p>
               <span className="text-[9px] sm:text-[10px] tracking-[0.3em] font-cinzel text-[var(--color-text-secondary)] uppercase mt-2">
