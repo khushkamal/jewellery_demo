@@ -1,49 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap');
 @import "tailwindcss";
 
-/* Ultra-Premium Light Luxury Combo (Default) - Alabaster Silk & Royal Champagne Gold */
+/* Regal Emerald & Heirloom Polki Gold (Permanent Theme) */
 :root {
-  --color-bg: #FAF7F2;
-  --color-bg-secondary: #F2ECE1;
-  --color-surface: #FFFFFF;
-  --color-surface-subtle: #EBE3D6;
-  --color-dark: #161412;
-  --color-gold: #B38F4D;
-  --color-gold-muted: #967537;
-  --color-text: #161412;
-  --color-text-secondary: #6B645B;
-  --color-border: rgba(22, 20, 18, 0.1);
-  --color-border-subtle: rgba(22, 20, 18, 0.05);
-}
-
-/* Royal Noir & Champagne Gold (Dark Mood) */
-[data-theme="noir"] {
-  --color-bg: #0A0A09;
-  --color-bg-secondary: #141311;
-  --color-surface: #1A1916;
-  --color-surface-subtle: #24221E;
-  --color-dark: #070706;
-  --color-gold: #C5A059;
-  --color-gold-muted: #9E7E3C;
-  --color-text: #F5F2EB;
-  --color-text-secondary: #9E988F;
-  --color-border: rgba(245, 242, 235, 0.1);
-  --color-border-subtle: rgba(245, 242, 235, 0.06);
-}
-
-/* Regal Emerald (Maharani Heritage) */
-[data-theme="emerald"] {
-  --color-bg: #0A1410;
-  --color-bg-secondary: #11201A;
-  --color-surface: #172B23;
-  --color-surface-subtle: #1F382E;
-  --color-dark: #060D0A;
+  --color-bg: #071510;
+  --color-bg-secondary: #0D201A;
+  --color-surface: #132B23;
+  --color-surface-subtle: #19382E;
+  --color-dark: #040A08;
   --color-gold: #D4AF37;
   --color-gold-muted: #A88624;
-  --color-text: #F7F5EE;
-  --color-text-secondary: #9DB0A6;
-  --color-border: rgba(247, 245, 238, 0.12);
-  --color-border-subtle: rgba(247, 245, 238, 0.06);
+  --color-text: #F5F7F2;
+  --color-text-secondary: #96ABA0;
+  --color-border: rgba(212, 175, 55, 0.18);
+  --color-border-subtle: rgba(245, 247, 242, 0.08);
 }
 
 @theme {
@@ -85,7 +55,7 @@ html {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
-  transition: background-color 0.5s ease, color 0.5s ease;
+  overflow-x: hidden;
 }
 
 body {
@@ -95,12 +65,13 @@ body {
   margin: 0;
   padding: 0;
   font-family: "Plus Jakarta Sans", system-ui, sans-serif;
-  transition: background-color 0.5s ease, color 0.5s ease;
+  position: relative;
+  width: 100%;
 }
 
 ::selection {
-  background-color: var(--color-dark);
-  color: var(--color-bg);
+  background-color: var(--color-gold);
+  color: #071510;
 }
 
 /* Luxury Editorial Typography Classes */
@@ -152,8 +123,9 @@ body {
   position: relative;
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: 0.75rem;
-  padding: 0.85rem 2rem;
+  padding: 0.85rem 1.8rem;
   letter-spacing: 0.2em;
   font-size: 0.75rem;
   text-transform: uppercase;
@@ -169,19 +141,19 @@ body {
 }
 
 .btn-editorial-light:hover {
-  background: var(--color-dark);
-  color: var(--color-bg);
-  border-color: var(--color-dark);
+  background: var(--color-gold);
+  color: #071510;
+  border-color: var(--color-gold);
 }
 
 .btn-editorial-dark {
-  border: 1px solid var(--color-border);
-  color: var(--color-text);
+  border: 1px solid var(--color-gold);
+  color: var(--color-gold);
   background: transparent;
 }
 
 .btn-editorial-dark:hover {
-  background: var(--color-dark);
-  color: var(--color-bg);
-  border-color: var(--color-dark);
+  background: var(--color-gold);
+  color: #071510;
+  border-color: var(--color-gold);
 }

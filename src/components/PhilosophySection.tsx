@@ -24,14 +24,14 @@ export default function PhilosophySection() {
           trigger: containerRef.current,
           start: "top bottom",
           end: "bottom top",
-          scrub: 1.2,
+          scrub: 1.1,
         },
       });
 
-      tl.to(line1Ref.current, { xPercent: -15, ease: "none" }, 0)
-        .to(line2Ref.current, { xPercent: 12, ease: "none" }, 0)
-        .to(line3Ref.current, { xPercent: -18, ease: "none" }, 0)
-        .to(line4Ref.current, { xPercent: 14, ease: "none" }, 0);
+      tl.to(line1Ref.current, { xPercent: -12, ease: "none" }, 0)
+        .to(line2Ref.current, { xPercent: 10, ease: "none" }, 0)
+        .to(line3Ref.current, { xPercent: -14, ease: "none" }, 0)
+        .to(line4Ref.current, { xPercent: 12, ease: "none" }, 0);
     }, containerRef);
 
     return () => ctx.revert();
@@ -40,21 +40,21 @@ export default function PhilosophySection() {
   return (
     <section
       ref={containerRef}
-      className="relative w-full min-h-[120vh] py-36 sm:py-48 flex flex-col justify-center overflow-hidden bg-[var(--color-bg)] transition-colors select-none border-t border-[var(--color-border)]"
+      className="relative w-full min-h-[110vh] py-28 sm:py-40 md:py-48 flex flex-col justify-center overflow-hidden bg-[#071510] transition-colors select-none border-t border-[var(--color-border)]"
     >
-      <div className="w-full flex flex-col space-y-4 sm:space-y-6 md:space-y-8 will-change-transform">
+      <div className="w-full max-w-full overflow-hidden flex flex-col space-y-3 sm:space-y-6 md:space-y-8 will-change-transform">
         {/* Line 1 */}
         <div
           ref={line1Ref}
-          className="whitespace-nowrap flex items-center space-x-6 sm:space-x-12 pl-6 sm:pl-20"
+          className="whitespace-nowrap flex items-center space-x-4 sm:space-x-10 pl-4 sm:pl-16"
         >
-          <span className="font-serif text-5xl sm:text-7xl md:text-9xl lg:text-[10.5rem] tracking-[0.03em] uppercase font-light text-[var(--color-text)] leading-none">
+          <span className="font-serif text-4xl sm:text-6xl md:text-8xl lg:text-[9.5rem] tracking-[0.03em] uppercase font-light text-[#F5F7F2] leading-none">
             JEWELLERY
           </span>
-          <span className="font-serif italic text-4xl sm:text-6xl md:text-8xl text-[var(--color-gold)]">
+          <span className="font-serif italic text-3xl sm:text-5xl md:text-7xl text-[var(--color-gold)]">
             —
           </span>
-          <span className="font-cinzel text-xs sm:text-sm tracking-[0.5em] uppercase text-[var(--color-text-secondary)]">
+          <span className="font-cinzel text-[10px] sm:text-xs tracking-[0.4em] uppercase text-[var(--color-text-secondary)]">
             01 / MANIFESTO
           </span>
         </div>
@@ -62,12 +62,12 @@ export default function PhilosophySection() {
         {/* Line 2 */}
         <div
           ref={line2Ref}
-          className="whitespace-nowrap flex items-center space-x-6 sm:space-x-12 pr-6 sm:pr-20 self-end"
+          className="whitespace-nowrap flex items-center space-x-4 sm:space-x-10 pr-4 sm:pr-16 self-end"
         >
-          <span className="font-cinzel text-xs sm:text-sm tracking-[0.5em] uppercase text-[var(--color-text-secondary)]">
+          <span className="font-cinzel text-[10px] sm:text-xs tracking-[0.4em] uppercase text-[var(--color-text-secondary)]">
             INTIMACY & GRACE
           </span>
-          <span className="font-serif text-5xl sm:text-7xl md:text-9xl lg:text-[10.5rem] tracking-[0.03em] uppercase font-light italic text-[var(--color-gold)] leading-none">
+          <span className="font-serif text-4xl sm:text-6xl md:text-8xl lg:text-[9.5rem] tracking-[0.03em] uppercase font-light italic text-[var(--color-gold)] leading-none">
             SHOULD FEEL
           </span>
         </div>
@@ -75,30 +75,30 @@ export default function PhilosophySection() {
         {/* Line 3 */}
         <div
           ref={line3Ref}
-          className="whitespace-nowrap flex items-center space-x-6 sm:space-x-12 pl-12 sm:pl-32"
+          className="whitespace-nowrap flex items-center space-x-4 sm:space-x-10 pl-6 sm:pl-28"
         >
-          <span className="font-serif text-5xl sm:text-7xl md:text-9xl lg:text-[10.5rem] tracking-[0.03em] uppercase font-light text-[var(--color-text)] leading-none">
+          <span className="font-serif text-4xl sm:text-6xl md:text-8xl lg:text-[9.5rem] tracking-[0.03em] uppercase font-light text-[#F5F7F2] leading-none">
             LIKE A PART
           </span>
-          <span className="w-24 sm:w-48 h-[1px] bg-[var(--color-border)]" />
+          <span className="w-16 sm:w-40 h-[1px] bg-[var(--color-border)]" />
         </div>
 
         {/* Line 4 */}
         <div
           ref={line4Ref}
-          className="whitespace-nowrap flex items-center space-x-6 sm:space-x-12 pr-12 sm:pr-24 self-end"
+          className="whitespace-nowrap flex items-center space-x-4 sm:space-x-10 pr-6 sm:pr-20 self-end"
         >
-          <span className="font-cinzel text-xs sm:text-sm tracking-[0.5em] uppercase text-[var(--color-text-secondary)]">
+          <span className="font-cinzel text-[10px] sm:text-xs tracking-[0.4em] uppercase text-[var(--color-text-secondary)]">
             HAUTE JOAILLERIE
           </span>
-          <span className="font-serif text-5xl sm:text-7xl md:text-9xl lg:text-[10.5rem] tracking-[0.03em] uppercase font-light text-[var(--color-text)] leading-none">
+          <span className="font-serif text-4xl sm:text-6xl md:text-8xl lg:text-[9.5rem] tracking-[0.03em] uppercase font-light text-[#F5F7F2] leading-none">
             OF YOU.
           </span>
         </div>
       </div>
 
       {/* Editorial Footnote */}
-      <div className="max-w-7xl mx-auto px-6 sm:px-12 mt-20 sm:mt-28 flex flex-col sm:flex-row justify-between items-start sm:items-center text-xs tracking-[0.25em] font-cinzel text-[var(--color-text-secondary)] uppercase gap-4">
+      <div className="max-w-7xl mx-auto px-5 sm:px-10 mt-16 sm:mt-24 flex flex-col sm:flex-row justify-between items-start sm:items-center text-xs tracking-[0.25em] font-cinzel text-[var(--color-text-secondary)] uppercase gap-3">
         <span>Aurelia Maison Philosophy</span>
         <span>A Quiet Sensation of Weight & Radiance</span>
       </div>

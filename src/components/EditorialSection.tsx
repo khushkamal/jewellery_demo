@@ -76,15 +76,15 @@ export default function EditorialSection() {
   return (
     <section
       ref={containerRef}
-      className="relative w-full bg-[var(--color-bg)] text-[var(--color-text)] py-28 sm:py-36 md:py-48 px-6 sm:px-12 overflow-hidden border-t border-[var(--color-border)]"
+      className="relative w-full bg-[#071510] text-[#F5F7F2] py-24 sm:py-36 md:py-44 px-5 sm:px-10 overflow-hidden border-t border-[var(--color-border)]"
     >
       <div className="max-w-7xl mx-auto">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-20 items-center">
           {/* Left: Huge Editorial Jewellery Photography with Clip Reveal */}
           <div className="lg:col-span-7">
             <div
               ref={imageWrapperRef}
-              className="relative w-full h-[500px] sm:h-[650px] lg:h-[750px] overflow-hidden bg-[var(--color-surface)] shadow-2xl border border-[var(--color-border)]"
+              className="relative w-full h-[440px] sm:h-[600px] lg:h-[720px] overflow-hidden bg-[#132B23] shadow-2xl border border-[var(--color-border)]"
               data-cursor
               data-cursor-text="EDITORIAL"
             >
@@ -97,7 +97,7 @@ export default function EditorialSection() {
                 className="object-cover object-center will-change-transform brightness-[0.88] contrast-[1.05]"
               />
               {/* Editorial Caption Watermark */}
-              <div className="absolute bottom-6 left-6 z-10 text-[10px] tracking-[0.35em] uppercase font-cinzel text-[var(--color-text)] drop-shadow-md">
+              <div className="absolute bottom-5 left-5 z-10 text-[9px] sm:text-[10px] tracking-[0.35em] uppercase font-cinzel text-[#F5F7F2] drop-shadow-md">
                 Campaign Monograph / Light Series 01
               </div>
             </div>
@@ -106,13 +106,13 @@ export default function EditorialSection() {
           {/* Right: Editorial Typography and Narrative */}
           <div
             ref={textContentRef}
-            className="lg:col-span-5 flex flex-col justify-center space-y-8 lg:pl-6 will-change-transform"
+            className="lg:col-span-5 flex flex-col justify-center space-y-6 sm:space-y-8 lg:pl-6 will-change-transform"
           >
             <div>
-              <span className="text-[10px] tracking-[0.4em] uppercase text-[var(--color-gold)] font-cinzel block mb-4">
+              <span className="text-[10px] tracking-[0.4em] uppercase text-[var(--color-gold)] font-cinzel block mb-3 sm:mb-4 font-medium">
                 The Architecture of Radiance
               </span>
-              <h2 className="font-serif text-4xl sm:text-6xl md:text-7xl tracking-[0.04em] uppercase font-light leading-[1.0] text-[var(--color-text)]">
+              <h2 className="font-serif text-4xl sm:text-6xl md:text-7xl tracking-[0.04em] uppercase font-light leading-[1.0] text-[#F5F7F2]">
                 DESIGNED <br />
                 AROUND <br />
                 <span className="italic font-normal text-[var(--color-gold)]">LIGHT.</span>
@@ -129,7 +129,7 @@ export default function EditorialSection() {
             <div>
               <a
                 href="#craft"
-                className="group inline-flex items-center space-x-3 text-xs tracking-[0.25em] uppercase font-cinzel text-[var(--color-text)] hover:text-[var(--color-gold)] transition-colors"
+                className="group inline-flex items-center space-x-3 text-xs tracking-[0.25em] uppercase font-cinzel text-[#F5F7F2] hover:text-[var(--color-gold)] transition-colors"
                 data-cursor
                 data-cursor-text="CRAFT"
               >

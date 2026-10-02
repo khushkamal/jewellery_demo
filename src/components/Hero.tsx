@@ -3,7 +3,7 @@
 import { useEffect, useRef } from "react";
 import Image from "next/image";
 import { ArrowDown } from "lucide-react";
-import { gsap, ScrollTrigger } from "@/lib/gsap";
+import { gsap } from "@/lib/gsap";
 
 export default function Hero() {
   const sectionRef = useRef<HTMLDivElement | null>(null);
@@ -11,7 +11,6 @@ export default function Hero() {
   const bgImage2Ref = useRef<HTMLDivElement | null>(null);
   const overlayRef = useRef<HTMLDivElement | null>(null);
 
-  const initialTextGroupRef = useRef<HTMLDivElement | null>(null);
   const heading1Ref = useRef<HTMLHeadingElement | null>(null);
   const labelRef = useRef<HTMLDivElement | null>(null);
   const ctaRef = useRef<HTMLDivElement | null>(null);
@@ -55,7 +54,7 @@ export default function Hero() {
           start: "top top",
           end: "+=220%",
           pin: true,
-          scrub: 1.2,
+          scrub: 1.1,
           anticipatePin: 1,
         },
       });
@@ -101,7 +100,7 @@ export default function Hero() {
         .to(
           overlayRef.current,
           {
-            opacity: 0.75,
+            opacity: 0.7,
             ease: "none",
           },
           0.2
@@ -179,9 +178,9 @@ export default function Hero() {
     <section
       ref={sectionRef}
       id="hero"
-      className="relative w-full h-screen overflow-hidden bg-[var(--color-bg)] text-[var(--color-text)] select-none"
+      className="relative w-full h-screen overflow-hidden bg-[#071510] text-[#F5F7F2] select-none"
     >
-      {/* Background Image 1: Main Editorial Diamond Necklace */}
+      {/* Background Image 1: Main Editorial Diamond & Emerald Necklace */}
       <div
         ref={bgImage1Ref}
         className="absolute inset-0 w-full h-full will-change-transform"
@@ -192,16 +191,16 @@ export default function Hero() {
           fill
           priority
           sizes="100vw"
-          className="object-cover object-center brightness-[0.92] contrast-[1.06]"
+          className="object-cover object-center brightness-[0.72] contrast-[1.12]"
         />
-        {/* Soft editorial atmospheric gradient */}
-        <div className="absolute inset-0 bg-gradient-to-t from-[var(--color-bg)] via-[var(--color-bg)]/20 to-[var(--color-bg)]/60" />
+        {/* Soft editorial emerald atmospheric vignette */}
+        <div className="absolute inset-0 bg-gradient-to-t from-[#071510] via-transparent to-[#071510]/80" />
       </div>
 
       {/* Dynamic theme overlay for transition between scenes */}
       <div
         ref={overlayRef}
-        className="absolute inset-0 bg-[var(--color-bg)] opacity-0 pointer-events-none transition-opacity duration-300"
+        className="absolute inset-0 bg-[#071510] opacity-0 pointer-events-none transition-opacity duration-300"
       />
 
       {/* Background Image 2: Second piece entering from side */}
@@ -215,32 +214,29 @@ export default function Hero() {
             alt="Aurelia Atelier Solitaire"
             fill
             sizes="(max-width: 768px) 100vw, 60vw"
-            className="object-cover object-center brightness-[0.94] shadow-2xl"
+            className="object-cover object-center brightness-[0.78] shadow-2xl"
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-[var(--color-bg)] via-transparent to-transparent md:block hidden" />
-          <div className="absolute inset-0 bg-gradient-to-t from-[var(--color-bg)] via-transparent to-[var(--color-bg)]/40" />
+          <div className="absolute inset-0 bg-gradient-to-r from-[#071510] via-transparent to-transparent md:block hidden" />
+          <div className="absolute inset-0 bg-gradient-to-t from-[#071510] via-transparent to-[#071510]/55" />
         </div>
       </div>
 
       {/* SCENE 1 CONTENT: "A JEWEL WITH A PRESENCE." */}
-      <div
-        ref={initialTextGroupRef}
-        className="relative z-20 w-full h-full max-w-7xl mx-auto px-6 sm:px-12 flex flex-col justify-between pt-32 pb-12 pointer-events-none"
-      >
+      <div className="relative z-20 w-full h-full max-w-7xl mx-auto px-5 sm:px-10 md:px-12 flex flex-col justify-between pt-28 sm:pt-36 pb-10 sm:pb-12 pointer-events-none">
         {/* Collection Label */}
         <div
           ref={labelRef}
           className="flex items-center space-x-3 text-[var(--color-gold)] font-cinzel text-xs tracking-[0.35em] uppercase font-medium pointer-events-auto"
         >
           <span className="w-8 h-[1px] bg-[var(--color-gold)]" />
-          <span>AURELIA / 2026 COLLECTION</span>
+          <span>AURELIA / 2026 MONOGRAPH</span>
         </div>
 
         {/* Center / Editorial Hero Typography */}
         <div className="max-w-3xl my-auto">
           <h1
             ref={heading1Ref}
-            className="font-serif text-5xl sm:text-7xl lg:text-8xl tracking-[0.06em] uppercase font-light leading-[0.98] text-[var(--color-text)] drop-shadow-sm"
+            className="font-serif text-4xl sm:text-6xl md:text-7xl lg:text-8xl tracking-[0.05em] uppercase font-light leading-[1.0] text-[#F5F7F2] drop-shadow-md"
           >
             A JEWEL <br />
             WITH A <br />
@@ -253,12 +249,12 @@ export default function Hero() {
           <div ref={ctaRef}>
             <a
               href="#collections"
-              className="btn-editorial btn-editorial-light group"
+              className="btn-editorial btn-editorial-dark group"
               data-cursor
               data-cursor-text="EXPLORE"
             >
               <span className="tracking-[0.25em]">EXPLORE COLLECTION</span>
-              <span className="w-4 h-[1px] bg-[var(--color-dark)] group-hover:w-7 transition-all duration-300" />
+              <span className="w-4 h-[1px] bg-[var(--color-gold)] group-hover:w-7 transition-all duration-300" />
             </a>
           </div>
 
@@ -276,7 +272,7 @@ export default function Hero() {
       {/* SCENE 2 CONTENT: "FORM. LIGHT. LEGACY." */}
       <div
         ref={secondTextGroupRef}
-        className="absolute inset-0 z-20 max-w-7xl mx-auto px-6 sm:px-12 flex flex-col justify-center pointer-events-none"
+        className="absolute inset-0 z-20 max-w-7xl mx-auto px-5 sm:px-10 md:px-12 flex flex-col justify-center pointer-events-none"
       >
         <div className="max-w-xl flex flex-col space-y-2 sm:space-y-4">
           <span className="text-[11px] tracking-[0.4em] uppercase text-[var(--color-gold)] font-cinzel mb-2 font-medium">
@@ -286,7 +282,7 @@ export default function Hero() {
           <div className="overflow-hidden">
             <span
               ref={formWordRef}
-              className="block font-serif text-5xl sm:text-7xl lg:text-8xl tracking-[0.08em] uppercase font-light text-[var(--color-text)] leading-[0.95]"
+              className="block font-serif text-4xl sm:text-6xl md:text-7xl lg:text-8xl tracking-[0.06em] uppercase font-light text-[#F5F7F2] leading-[0.98]"
             >
               FORM.
             </span>
@@ -295,7 +291,7 @@ export default function Hero() {
           <div className="overflow-hidden">
             <span
               ref={lightWordRef}
-              className="block font-serif text-5xl sm:text-7xl lg:text-8xl tracking-[0.08em] uppercase font-light italic text-[var(--color-gold)] leading-[0.95]"
+              className="block font-serif text-4xl sm:text-6xl md:text-7xl lg:text-8xl tracking-[0.06em] uppercase font-light italic text-[var(--color-gold)] leading-[0.98]"
             >
               LIGHT.
             </span>
@@ -304,7 +300,7 @@ export default function Hero() {
           <div className="overflow-hidden">
             <span
               ref={legacyWordRef}
-              className="block font-serif text-5xl sm:text-7xl lg:text-8xl tracking-[0.08em] uppercase font-light text-[var(--color-text)] leading-[0.95]"
+              className="block font-serif text-4xl sm:text-6xl md:text-7xl lg:text-8xl tracking-[0.06em] uppercase font-light text-[#F5F7F2] leading-[0.98]"
             >
               LEGACY.
             </span>
@@ -312,7 +308,7 @@ export default function Hero() {
 
           <p className="font-sans text-xs sm:text-sm tracking-widest text-[var(--color-text-secondary)] uppercase max-w-md pt-4 font-light leading-relaxed">
             Every facet carved to immortalize emotion. Hand-faceted in pure
-            solid gold and conflict-free natural diamonds.
+            solid gold, certified Zambian emeralds, and conflict-free natural diamonds.
           </p>
         </div>
       </div>

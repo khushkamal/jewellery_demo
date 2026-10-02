@@ -68,30 +68,30 @@ export default function BespokeSection() {
     <section
       ref={containerRef}
       id="bespoke"
-      className="relative w-full bg-[var(--color-bg)] text-[var(--color-text)] py-32 sm:py-44 px-6 sm:px-12 overflow-hidden border-t border-[var(--color-border)]"
+      className="relative w-full bg-[#071510] text-[#F5F7F2] py-28 sm:py-40 md:py-44 px-5 sm:px-10 overflow-hidden border-t border-[var(--color-border)]"
     >
       <div className="max-w-7xl mx-auto">
         {/* Animated Thin Gold Line across the section */}
-        <div className="w-full h-[1px] bg-[var(--color-border)] mb-20 overflow-hidden">
+        <div className="w-full h-[1px] bg-[var(--color-border)] mb-16 sm:mb-20 overflow-hidden">
           <div ref={lineRef} className="w-full h-full bg-[var(--color-gold)]" />
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-20 items-center">
           {/* Left Column: Heading and Narrative */}
-          <div className="lg:col-span-6 space-y-8">
-            <span className="text-[10px] tracking-[0.4em] uppercase text-[var(--color-gold)] font-cinzel block">
+          <div className="lg:col-span-6 space-y-6 sm:space-y-8">
+            <span className="text-[10px] tracking-[0.4em] uppercase text-[var(--color-gold)] font-cinzel block font-medium">
               Haute Joaillerie Sur Mesure
             </span>
 
             <h2
               ref={headingRef}
-              className="font-serif text-5xl sm:text-7xl lg:text-8xl tracking-[0.05em] uppercase font-light leading-[0.95] text-[var(--color-text)]"
+              className="font-serif text-4xl sm:text-6xl md:text-7xl lg:text-8xl tracking-[0.05em] uppercase font-light leading-[0.95] text-[#F5F7F2]"
             >
               MADE <br />
               <span className="italic font-normal text-[var(--color-gold)]">FOR YOU.</span>
             </h2>
 
-            <p className="font-serif text-xl sm:text-2xl text-[var(--color-text)]/90 font-light leading-relaxed max-w-lg italic">
+            <p className="font-serif text-xl sm:text-2xl text-[#F5F7F2]/90 font-light leading-relaxed max-w-lg italic">
               &ldquo;From first sketch to final polish, create a piece that is
               uniquely yours.&rdquo;
             </p>
@@ -103,7 +103,7 @@ export default function BespokeSection() {
               models.
             </p>
 
-            <div className="pt-4">
+            <div className="pt-2">
               <button
                 onClick={() => setIsConsultOpen(true)}
                 className="btn-editorial btn-editorial-dark group"
@@ -119,7 +119,7 @@ export default function BespokeSection() {
           {/* Right Column: Atelier Still Life Photography */}
           <div className="lg:col-span-6">
             <div
-              className="relative w-full h-[450px] sm:h-[580px] bg-[var(--color-surface)] overflow-hidden shadow-2xl border border-[var(--color-border)]"
+              className="relative w-full h-[400px] sm:h-[540px] bg-[#132B23] overflow-hidden shadow-2xl border border-[var(--color-border)]"
               data-cursor
               data-cursor-text="SKETCH"
             >
@@ -130,13 +130,13 @@ export default function BespokeSection() {
                 sizes="(max-width: 1024px) 100vw, 50vw"
                 className="object-cover object-center brightness-[0.88]"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#0A0A09]/60 via-transparent to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#071510]/60 via-transparent to-transparent" />
 
-              <div className="absolute bottom-6 right-6 bg-[var(--color-bg-secondary)]/90 backdrop-blur-md px-5 py-3 border border-[var(--color-border)] text-right">
-                <span className="text-[9px] tracking-[0.3em] font-cinzel text-[var(--color-gold)] uppercase block">
+              <div className="absolute bottom-4 right-4 sm:bottom-6 sm:right-6 bg-[#0D201A]/90 backdrop-blur-md px-4 py-2.5 sm:px-5 sm:py-3 border border-[var(--color-border)] text-right">
+                <span className="text-[8px] sm:text-[9px] tracking-[0.3em] font-cinzel text-[var(--color-gold)] uppercase block font-medium">
                   Studio Archive
                 </span>
-                <span className="text-xs font-serif italic text-[var(--color-text)]">
+                <span className="text-xs font-serif italic text-[#F5F7F2]">
                   Original Watercolor Gouache No. 248
                 </span>
               </div>
@@ -147,17 +147,17 @@ export default function BespokeSection() {
 
       {/* Bespoke Private Consultation Modal */}
       {isConsultOpen && (
-        <div className="fixed inset-0 z-[100] bg-[#0A0A09]/80 backdrop-blur-md flex items-center justify-center p-6 animate-in fade-in duration-300">
-          <div className="relative w-full max-w-lg bg-[var(--color-bg-secondary)] text-[var(--color-text)] p-8 sm:p-12 border border-[var(--color-border)] shadow-2xl">
+        <div className="fixed inset-0 z-[100] bg-[#071510]/85 backdrop-blur-md flex items-center justify-center p-4 sm:p-6 animate-in fade-in duration-300">
+          <div className="relative w-full max-w-lg bg-[#0D201A] text-[#F5F7F2] p-6 sm:p-10 border border-[var(--color-border)] shadow-2xl">
             <button
               onClick={() => setIsConsultOpen(false)}
-              className="absolute top-6 right-6 text-xs tracking-widest font-cinzel uppercase text-[var(--color-text-secondary)] hover:text-[var(--color-text)]"
+              className="absolute top-5 right-5 text-xs tracking-widest font-cinzel uppercase text-[var(--color-text-secondary)] hover:text-[#F5F7F2]"
             >
               Close [✕]
             </button>
 
             {formSubmitted ? (
-              <div className="py-12 text-center space-y-4">
+              <div className="py-10 text-center space-y-4">
                 <div className="w-12 h-12 rounded-full bg-[var(--color-gold)]/20 text-[var(--color-gold)] flex items-center justify-center mx-auto">
                   <Check className="w-6 h-6" />
                 </div>
@@ -168,49 +168,49 @@ export default function BespokeSection() {
                 </p>
               </div>
             ) : (
-              <form onSubmit={handleBooking} className="space-y-6">
+              <form onSubmit={handleBooking} className="space-y-5">
                 <div>
-                  <span className="text-[10px] tracking-[0.35em] uppercase text-[var(--color-gold)] font-cinzel block mb-1">
+                  <span className="text-[10px] tracking-[0.35em] uppercase text-[var(--color-gold)] font-cinzel block mb-1 font-medium">
                     Private Commission
                   </span>
-                  <h3 className="font-serif text-3xl uppercase tracking-wider text-[var(--color-text)]">
+                  <h3 className="font-serif text-2xl sm:text-3xl uppercase tracking-wider text-[#F5F7F2]">
                     Reserve Bespoke Salon
                   </h3>
                 </div>
 
-                <div className="space-y-4">
+                <div className="space-y-3.5">
                   <div>
-                    <label className="text-[10px] tracking-[0.2em] uppercase font-cinzel block text-[var(--color-text-secondary)] mb-1">
+                    <label className="text-[9px] tracking-[0.2em] uppercase font-cinzel block text-[var(--color-text-secondary)] mb-1">
                       Full Name
                     </label>
                     <input
                       type="text"
                       required
                       placeholder="e.g. Lady Katherine Roy"
-                      className="w-full bg-[var(--color-surface)] border border-[var(--color-border)] p-3 text-sm focus:outline-none focus:border-[var(--color-gold)] font-serif text-[var(--color-text)]"
+                      className="w-full bg-[#132B23] border border-[var(--color-border)] p-3 text-sm focus:outline-none focus:border-[var(--color-gold)] font-serif text-[#F5F7F2]"
                     />
                   </div>
 
                   <div>
-                    <label className="text-[10px] tracking-[0.2em] uppercase font-cinzel block text-[var(--color-text-secondary)] mb-1">
+                    <label className="text-[9px] tracking-[0.2em] uppercase font-cinzel block text-[var(--color-text-secondary)] mb-1">
                       Private Email / Phone
                     </label>
                     <input
                       type="text"
                       required
                       placeholder="+91 98200 00000 or email"
-                      className="w-full bg-[var(--color-surface)] border border-[var(--color-border)] p-3 text-sm focus:outline-none focus:border-[var(--color-gold)] font-serif text-[var(--color-text)]"
+                      className="w-full bg-[#132B23] border border-[var(--color-border)] p-3 text-sm focus:outline-none focus:border-[var(--color-gold)] font-serif text-[#F5F7F2]"
                     />
                   </div>
 
                   <div>
-                    <label className="text-[10px] tracking-[0.2em] uppercase font-cinzel block text-[var(--color-text-secondary)] mb-1">
+                    <label className="text-[9px] tracking-[0.2em] uppercase font-cinzel block text-[var(--color-text-secondary)] mb-1">
                       Jewellery Category
                     </label>
-                    <select className="w-full bg-[var(--color-surface)] border border-[var(--color-border)] p-3 text-sm focus:outline-none focus:border-[var(--color-gold)] font-serif text-[var(--color-text)]">
-                      <option>High Jewellery Necklace</option>
+                    <select className="w-full bg-[#132B23] border border-[var(--color-border)] p-3 text-sm focus:outline-none focus:border-[var(--color-gold)] font-serif text-[#F5F7F2]">
+                      <option>High Jewellery Emerald Necklace</option>
                       <option>Engagement / Solitaire Ring</option>
-                      <option>Bridal Parure</option>
+                      <option>Royal Bridal Parure</option>
                       <option>Heirloom Resetting</option>
                     </select>
                   </div>
@@ -218,7 +218,7 @@ export default function BespokeSection() {
 
                 <button
                   type="submit"
-                  className="w-full py-4 bg-[var(--color-gold)] text-[#0A0A09] text-[10px] tracking-[0.3em] font-cinzel uppercase font-semibold hover:bg-[#F5F2EB] transition-colors"
+                  className="w-full py-3.5 sm:py-4 bg-[var(--color-gold)] text-[#071510] text-[10px] tracking-[0.3em] font-cinzel uppercase font-semibold hover:bg-[#F5F7F2] transition-colors shadow-lg"
                 >
                   Submit Private Request
                 </button>

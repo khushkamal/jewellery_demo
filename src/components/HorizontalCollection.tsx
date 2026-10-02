@@ -5,7 +5,7 @@ import Image from "next/image";
 import { ArrowUpRight, Plus, Eye } from "lucide-react";
 import { SIGNATURE_PRODUCTS } from "@/data/jewellery";
 import { useCart } from "@/context/CartContext";
-import { gsap } from "@/lib/gsap";
+import { gsap, ScrollTrigger } from "@/lib/gsap";
 
 export default function HorizontalCollection() {
   const containerRef = useRef<HTMLDivElement | null>(null);
@@ -44,7 +44,7 @@ export default function HorizontalCollection() {
           pin: true,
           scrub: 1.1,
           start: "top top",
-          end: () => `+=${totalScrollWidth + 400}`,
+          end: () => `+=${totalScrollWidth + 300}`,
           invalidateOnRefresh: true,
           anticipatePin: 1,
         },
@@ -63,14 +63,14 @@ export default function HorizontalCollection() {
 
         gsap.fromTo(
           img,
-          { scale: 0.92 },
+          { scale: 0.94 },
           {
             scale: 1,
             ease: "power1.out",
             scrollTrigger: {
               trigger: card,
               containerAnimation: tl,
-              start: "left 80%",
+              start: "left 85%",
               end: "center 50%",
               scrub: true,
             },
@@ -80,14 +80,14 @@ export default function HorizontalCollection() {
         if (num) {
           gsap.fromTo(
             num,
-            { opacity: 0.3 },
+            { opacity: 0.35 },
             {
               opacity: 1,
               ease: "none",
               scrollTrigger: {
                 trigger: card,
                 containerAnimation: tl,
-                start: "left 80%",
+                start: "left 85%",
                 end: "center 50%",
                 scrub: true,
               },
@@ -97,22 +97,30 @@ export default function HorizontalCollection() {
       });
     }, containerRef);
 
-    return () => ctx.revert();
+    // Refresh scroll triggers when images load
+    const timeout = setTimeout(() => {
+      ScrollTrigger.refresh();
+    }, 500);
+
+    return () => {
+      clearTimeout(timeout);
+      ctx.revert();
+    };
   }, [isMobile]);
 
   return (
     <section
       ref={containerRef}
       id="signature"
-      className="relative w-full bg-[var(--color-bg-secondary)] text-[var(--color-text)] overflow-hidden"
+      className="relative w-full bg-[#0D201A] text-[#F5F7F2] overflow-hidden"
     >
       {/* Header bar across section */}
-      <div className="pt-16 pb-8 px-6 sm:px-12 max-w-7xl mx-auto flex flex-col md:flex-row md:items-end justify-between border-b border-[var(--color-border)]">
+      <div className="pt-16 sm:pt-20 pb-8 px-5 sm:px-10 max-w-7xl mx-auto flex flex-col md:flex-row md:items-end justify-between border-b border-[var(--color-border)]">
         <div>
-          <span className="text-[10px] tracking-[0.4em] uppercase text-[var(--color-gold)] font-cinzel block mb-2">
+          <span className="text-[10px] tracking-[0.4em] uppercase text-[var(--color-gold)] font-cinzel block mb-2 font-medium">
             Selection No. 01 / Haute Joaillerie
           </span>
-          <h2 className="font-serif text-3xl sm:text-5xl lg:text-6xl tracking-[0.06em] uppercase font-light text-[var(--color-text)]">
+          <h2 className="font-serif text-3xl sm:text-5xl lg:text-6xl tracking-[0.05em] uppercase font-light text-[#F5F7F2]">
             SIGNATURE COLLECTION
           </h2>
         </div>
@@ -126,7 +134,7 @@ export default function HorizontalCollection() {
         <div className="h-[80vh] flex items-center">
           <div
             ref={trackRef}
-            className="flex items-center space-x-12 sm:space-x-16 px-12 sm:px-24 will-change-transform"
+            className="flex items-center space-x-12 sm:space-x-16 px-10 sm:px-20 will-change-transform"
           >
             {SIGNATURE_PRODUCTS.map((product, idx) => (
               <div
@@ -145,7 +153,7 @@ export default function HorizontalCollection() {
 
                 {/* Editorial Image Container */}
                 <div
-                  className="relative h-[480px] xl:h-[520px] w-full overflow-hidden bg-[var(--color-surface)] cursor-pointer shadow-2xl border border-[var(--color-border)]"
+                  className="relative h-[480px] xl:h-[520px] w-full overflow-hidden bg-[#132B23] cursor-pointer shadow-2xl border border-[var(--color-border)]"
                   data-cursor
                   data-cursor-text="VIEW"
                   onClick={() => setActiveQuickViewProduct(product)}
@@ -155,10 +163,10 @@ export default function HorizontalCollection() {
                     alt={product.name}
                     fill
                     sizes="480px"
-                    className="signature-img object-cover object-center transition-transform duration-700 ease-out group-hover:scale-105 brightness-[0.9]"
+                    className="signature-img object-cover object-center transition-transform duration-700 ease-out group-hover:scale-105 brightness-[0.88] contrast-[1.05]"
                   />
                   {/* Subtle vignette */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#0A0A09]/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#071510]/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
 
                   {/* Hover Quick Actions */}
                   <div className="absolute bottom-4 left-4 right-4 flex items-center justify-between opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-auto">
@@ -167,7 +175,7 @@ export default function HorizontalCollection() {
                         e.stopPropagation();
                         addToCart(product);
                       }}
-                      className="bg-[var(--color-gold)] text-[#0A0A09] font-semibold px-4 py-2.5 text-[10px] tracking-[0.2em] font-cinzel uppercase flex items-center space-x-2 hover:bg-[#F5F2EB] transition-colors"
+                      className="bg-[var(--color-gold)] text-[#071510] font-semibold px-4 py-2.5 text-[10px] tracking-[0.2em] font-cinzel uppercase flex items-center space-x-2 hover:bg-[#F5F7F2] transition-colors shadow-lg"
                     >
                       <Plus className="w-3.5 h-3.5" />
                       <span>Acquire Piece</span>
@@ -177,7 +185,7 @@ export default function HorizontalCollection() {
                         e.stopPropagation();
                         setActiveQuickViewProduct(product);
                       }}
-                      className="bg-[#0A0A09]/80 text-[#F5F2EB] p-2.5 backdrop-blur-sm hover:bg-[#0A0A09] transition-colors border border-[var(--color-border)]"
+                      className="bg-[#071510]/85 text-[#F5F7F2] p-2.5 backdrop-blur-sm hover:bg-[#071510] transition-colors border border-[var(--color-border)]"
                       aria-label="View Details"
                     >
                       <Eye className="w-4 h-4 stroke-[1.4]" />
@@ -190,7 +198,7 @@ export default function HorizontalCollection() {
                   <div>
                     <h3
                       onClick={() => setActiveQuickViewProduct(product)}
-                      className="font-serif text-2xl tracking-[0.04em] uppercase text-[var(--color-text)] group-hover:text-[var(--color-gold)] transition-colors cursor-pointer"
+                      className="font-serif text-2xl tracking-[0.04em] uppercase text-[#F5F7F2] group-hover:text-[var(--color-gold)] transition-colors cursor-pointer"
                     >
                       {product.name}
                     </h3>
@@ -206,12 +214,12 @@ export default function HorizontalCollection() {
             ))}
 
             {/* Ending Editorial Card */}
-            <div className="flex-shrink-0 w-[360px] h-[520px] border border-[var(--color-border)] p-8 flex flex-col justify-between bg-[var(--color-surface)]/60 shadow-2xl">
+            <div className="flex-shrink-0 w-[360px] h-[520px] border border-[var(--color-border)] p-8 flex flex-col justify-between bg-[#132B23]/70 shadow-2xl backdrop-blur-md">
               <div>
-                <span className="text-[10px] tracking-[0.4em] font-cinzel text-[var(--color-gold)] uppercase">
+                <span className="text-[10px] tracking-[0.4em] font-cinzel text-[var(--color-gold)] uppercase font-medium">
                   Private Salon
                 </span>
-                <h4 className="font-serif text-3xl uppercase tracking-wider mt-4 leading-tight text-[var(--color-text)]">
+                <h4 className="font-serif text-3xl uppercase tracking-wider mt-4 leading-tight text-[#F5F7F2]">
                   BESPOKE <br />
                   COMMISSIONS
                 </h4>
@@ -235,7 +243,7 @@ export default function HorizontalCollection() {
         </div>
       ) : (
         /* Mobile: Graceful Vertical Editorial Cards */
-        <div className="py-12 px-6 space-y-12">
+        <div className="py-10 px-5 space-y-12">
           {SIGNATURE_PRODUCTS.map((product, idx) => (
             <div
               key={product.id}
@@ -248,7 +256,7 @@ export default function HorizontalCollection() {
                 </span>
               </div>
               <div
-                className="relative h-[400px] w-full bg-[var(--color-surface)] overflow-hidden border border-[var(--color-border)]"
+                className="relative h-[380px] w-full bg-[#132B23] overflow-hidden border border-[var(--color-border)]"
                 onClick={() => setActiveQuickViewProduct(product)}
               >
                 <Image
@@ -256,12 +264,12 @@ export default function HorizontalCollection() {
                   alt={product.name}
                   fill
                   sizes="100vw"
-                  className="object-cover object-center"
+                  className="object-cover object-center brightness-[0.88]"
                 />
               </div>
               <div className="mt-4 flex items-baseline justify-between">
                 <div>
-                  <h3 className="font-serif text-2xl uppercase tracking-wider text-[var(--color-text)]">
+                  <h3 className="font-serif text-2xl uppercase tracking-wider text-[#F5F7F2]">
                     {product.name}
                   </h3>
                   <p className="text-xs text-[var(--color-text-secondary)]">{product.category}</p>
@@ -273,14 +281,14 @@ export default function HorizontalCollection() {
               <div className="mt-4 flex space-x-3">
                 <button
                   onClick={() => addToCart(product)}
-                  className="flex-1 bg-[var(--color-gold)] text-[#0A0A09] font-medium py-3 text-xs tracking-[0.2em] font-cinzel uppercase flex items-center justify-center space-x-2"
+                  className="flex-1 bg-[var(--color-gold)] text-[#071510] font-semibold py-3 text-xs tracking-[0.2em] font-cinzel uppercase flex items-center justify-center space-x-2"
                 >
                   <Plus className="w-3.5 h-3.5" />
                   <span>Acquire Piece</span>
                 </button>
                 <button
                   onClick={() => setActiveQuickViewProduct(product)}
-                  className="px-4 border border-[var(--color-border)] text-[var(--color-text)] text-xs font-cinzel tracking-widest uppercase"
+                  className="px-4 border border-[var(--color-border)] text-[#F5F7F2] text-xs font-cinzel tracking-widest uppercase"
                 >
                   Details
                 </button>

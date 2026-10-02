@@ -59,24 +59,24 @@ export default function CollectionIntro() {
     <section
       ref={containerRef}
       id="collection-intro"
-      className="relative w-full bg-[var(--color-bg)] text-[var(--color-text)] py-28 sm:py-36 md:py-48 px-6 sm:px-12 overflow-hidden border-t border-[var(--color-border)]"
+      className="relative w-full bg-[#071510] text-[#F5F7F2] py-24 sm:py-36 md:py-44 px-5 sm:px-10 overflow-hidden border-t border-[var(--color-border)]"
     >
       <div className="max-w-7xl mx-auto">
         {/* Editorial Subtitle */}
-        <div className="mb-12 flex items-center space-x-3">
-          <span className="text-[10px] tracking-[0.4em] uppercase text-[var(--color-gold)] font-cinzel">
+        <div className="mb-10 sm:mb-12 flex items-center space-x-3">
+          <span className="text-[10px] tracking-[0.4em] uppercase text-[var(--color-gold)] font-cinzel font-medium">
             Aurelia Monograph 2026
           </span>
           <span className="w-12 h-[1px] bg-[var(--color-gold)]/40" />
         </div>
 
         {/* Split Grid: Left Heading, Right Description & CTA */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-start">
           {/* Left Column: Huge Editorial Heading */}
           <div className="lg:col-span-7">
             <h2
               ref={headingRef}
-              className="font-serif text-4xl sm:text-6xl md:text-7xl lg:text-8xl tracking-[0.04em] uppercase font-light leading-[1.02] text-[var(--color-text)]"
+              className="font-serif text-4xl sm:text-6xl md:text-7xl lg:text-8xl tracking-[0.04em] uppercase font-light leading-[1.02] text-[#F5F7F2]"
             >
               THE NEW <br />
               <span className="italic font-normal text-[var(--color-gold)]">COLLECTION</span>
@@ -84,10 +84,10 @@ export default function CollectionIntro() {
           </div>
 
           {/* Right Column: Paragraph, View Collection, and Details */}
-          <div className="lg:col-span-5 flex flex-col justify-between pt-2 lg:pt-6 space-y-8">
+          <div className="lg:col-span-5 flex flex-col justify-between pt-2 lg:pt-6 space-y-6 sm:space-y-8">
             <p
               ref={paragraphRef}
-              className="font-serif text-xl sm:text-2xl md:text-3xl text-[var(--color-text)]/90 font-light leading-snug italic"
+              className="font-serif text-xl sm:text-2xl md:text-3xl text-[#F5F7F2]/90 font-light leading-snug italic"
             >
               &ldquo;Jewels designed around light, proportion and quiet expression.&rdquo;
             </p>
@@ -105,7 +105,7 @@ export default function CollectionIntro() {
                 <a
                   ref={linkRef}
                   href="#signature"
-                  className="group inline-flex items-center space-x-3 text-xs tracking-[0.25em] uppercase font-cinzel text-[var(--color-text)] hover:text-[var(--color-gold)] transition-colors"
+                  className="group inline-flex items-center space-x-3 text-xs tracking-[0.25em] uppercase font-cinzel text-[#F5F7F2] hover:text-[var(--color-gold)] transition-colors"
                   data-cursor
                   data-cursor-text="DISCOVER"
                 >
@@ -113,7 +113,7 @@ export default function CollectionIntro() {
                   <ArrowRight className="w-4 h-4 group-hover:translate-x-1.5 transition-transform duration-300 stroke-[1.5]" />
                 </a>
 
-                <span className="text-[10px] tracking-[0.3em] font-cinzel text-[var(--color-text-secondary)] uppercase">
+                <span className="text-[9px] sm:text-[10px] tracking-[0.3em] font-cinzel text-[var(--color-text-secondary)] uppercase">
                   Curated Catalog / 04 Items
                 </span>
               </div>

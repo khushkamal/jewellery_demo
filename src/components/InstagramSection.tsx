@@ -23,15 +23,15 @@ function InstagramIcon({ className = "w-4 h-4" }: { className?: string }) {
 
 export default function InstagramSection() {
   return (
-    <section className="relative w-full bg-[var(--color-bg-secondary)] text-[var(--color-text)] py-24 sm:py-36 px-6 sm:px-12 border-t border-[var(--color-border)]">
+    <section className="relative w-full bg-[#0D201A] text-[#F5F7F2] py-20 sm:py-32 px-5 sm:px-10 border-t border-[var(--color-border)]">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
-        <div className="flex flex-col sm:flex-row sm:items-end justify-between mb-12 sm:mb-16 gap-4">
+        <div className="flex flex-col sm:flex-row sm:items-end justify-between mb-10 sm:mb-14 gap-4">
           <div>
-            <span className="text-[10px] tracking-[0.4em] uppercase text-[var(--color-gold)] font-cinzel block mb-2">
+            <span className="text-[10px] tracking-[0.4em] uppercase text-[var(--color-gold)] font-cinzel block mb-2 font-medium">
               Visual Archives
             </span>
-            <h2 className="font-serif text-3xl sm:text-5xl lg:text-6xl tracking-[0.05em] uppercase font-light text-[var(--color-text)]">
+            <h2 className="font-serif text-3xl sm:text-5xl lg:text-6xl tracking-[0.05em] uppercase font-light text-[#F5F7F2]">
               FOLLOW THE LIGHT
             </h2>
           </div>
@@ -40,18 +40,18 @@ export default function InstagramSection() {
             href="https://instagram.com"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-xs tracking-[0.25em] uppercase font-cinzel text-[var(--color-text)] hover:text-[var(--color-gold)] transition-colors editorial-link self-start sm:self-auto"
+            className="text-xs tracking-[0.25em] uppercase font-cinzel text-[#F5F7F2] hover:text-[var(--color-gold)] transition-colors editorial-link self-start sm:self-auto"
           >
             @AURELIAJEWELS
           </a>
         </div>
 
         {/* Minimal Editorial Grid */}
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3 sm:gap-4">
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3 sm:gap-4">
           {CAMPAIGN_GALLERY.map((item) => (
             <div
               key={item.id}
-              className="group relative aspect-[3/4] overflow-hidden bg-[var(--color-surface)] border border-[var(--color-border)] cursor-pointer"
+              className="group relative aspect-[3/4] overflow-hidden bg-[#132B23] border border-[var(--color-border)] cursor-pointer"
               data-cursor
               data-cursor-text="EXP"
             >
@@ -59,20 +59,20 @@ export default function InstagramSection() {
                 src={item.image}
                 alt={item.title}
                 fill
-                sizes="(max-width: 768px) 50vw, (max-width: 1024px) 33vw, 16vw"
-                className="object-cover object-center transition-transform duration-700 ease-out group-hover:scale-105 brightness-[0.9]"
+                sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 16vw"
+                className="object-cover object-center transition-transform duration-700 ease-out group-hover:scale-105 brightness-[0.88]"
               />
 
               {/* Minimal Dark Hover Overlay with Subtle Instagram Icon */}
-              <div className="absolute inset-0 bg-[#0A0A09]/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-between p-4 text-[var(--color-text)]">
+              <div className="absolute inset-0 bg-[#071510]/70 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-between p-3.5 sm:p-4 text-[#F5F7F2]">
                 <div className="self-end">
                   <InstagramIcon className="w-4 h-4 text-[var(--color-gold)]" />
                 </div>
                 <div>
-                  <span className="text-[9px] tracking-widest uppercase font-cinzel text-[var(--color-gold)] block">
+                  <span className="text-[8px] sm:text-[9px] tracking-widest uppercase font-cinzel text-[var(--color-gold)] block">
                     {item.caption}
                   </span>
-                  <span className="text-xs font-serif italic text-[var(--color-text)]">
+                  <span className="text-xs font-serif italic text-[#F5F7F2]">
                     {item.title}
                   </span>
                 </div>

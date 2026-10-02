@@ -21,14 +21,19 @@ export default function SmoothScroll({
       return;
     }
 
+    const isTouch =
+      typeof window !== "undefined" &&
+      ("ontouchstart" in window || navigator.maxTouchPoints > 0);
+
     const lenis = new Lenis({
-      duration: 1.4,
+      duration: isTouch ? 1.0 : 1.3,
       easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
       orientation: "vertical",
       gestureOrientation: "vertical",
       smoothWheel: true,
-      wheelMultiplier: 0.9,
-      touchMultiplier: 1.6,
+      wheelMultiplier: 0.95,
+      touchMultiplier: 1.2,
+      syncTouch: false,
       infinite: false,
     });
 

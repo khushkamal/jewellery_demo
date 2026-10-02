@@ -25,26 +25,26 @@ export default function QuickViewModal() {
       : activeQuickViewProduct.secondaryImage;
 
   return (
-    <div className="fixed inset-0 z-[110] flex items-center justify-center p-4 sm:p-6 md:p-10 select-none">
+    <div className="fixed inset-0 z-[110] flex items-center justify-center p-3 sm:p-6 md:p-10 select-none">
       {/* Backdrop */}
       <div
         onClick={() => setActiveQuickViewProduct(null)}
-        className="fixed inset-0 bg-[#0A0A09]/80 backdrop-blur-md animate-in fade-in duration-300"
+        className="fixed inset-0 bg-[#071510]/85 backdrop-blur-md animate-in fade-in duration-300"
       />
 
       {/* Modal Card */}
-      <div className="relative w-full max-w-4xl bg-[var(--color-bg-secondary)] text-[var(--color-text)] shadow-2xl border border-[var(--color-border)] overflow-hidden z-10 grid grid-cols-1 md:grid-cols-12 max-h-[90vh] overflow-y-auto animate-in zoom-in-95 duration-300">
+      <div className="relative w-full max-w-4xl bg-[#0D201A] text-[#F5F7F2] shadow-2xl border border-[var(--color-border)] overflow-hidden z-10 grid grid-cols-1 md:grid-cols-12 max-h-[92vh] overflow-y-auto animate-in zoom-in-95 duration-300">
         {/* Close Button */}
         <button
           onClick={() => setActiveQuickViewProduct(null)}
-          className="absolute top-4 right-4 z-20 p-2 bg-[var(--color-bg-secondary)]/80 backdrop-blur-sm text-[var(--color-text)] hover:text-[var(--color-gold)] transition-colors border border-[var(--color-border)]"
+          className="absolute top-3 right-3 sm:top-4 sm:right-4 z-20 p-2 bg-[#071510]/80 backdrop-blur-sm text-[#F5F7F2] hover:text-[var(--color-gold)] transition-colors border border-[var(--color-border)]"
           aria-label="Close"
         >
           <X className="w-5 h-5 stroke-[1.4]" />
         </button>
 
         {/* Left Column: Image Viewer with Multiple Angles */}
-        <div className="md:col-span-6 bg-[var(--color-surface)] relative h-[380px] sm:h-[460px] md:h-full min-h-[400px]">
+        <div className="md:col-span-6 bg-[#132B23] relative h-[320px] sm:h-[440px] md:h-full min-h-[320px]">
           <Image
             src={currentImage}
             alt={activeQuickViewProduct.name}
@@ -89,15 +89,15 @@ export default function QuickViewModal() {
         </div>
 
         {/* Right Column: Detailed Editorial Specifications */}
-        <div className="md:col-span-6 p-6 sm:p-10 flex flex-col justify-between space-y-6">
+        <div className="md:col-span-6 p-5 sm:p-8 md:p-10 flex flex-col justify-between space-y-6">
           <div className="space-y-4">
             <div className="flex items-center justify-between">
-              <span className="text-[10px] tracking-[0.35em] uppercase font-cinzel text-[var(--color-gold)]">
+              <span className="text-[10px] tracking-[0.35em] uppercase font-cinzel text-[var(--color-gold)] font-medium">
                 {activeQuickViewProduct.category}
               </span>
               <button
                 onClick={() => toggleWishlist(activeQuickViewProduct.id)}
-                className="p-1.5 text-[var(--color-text)] hover:text-[var(--color-gold)] transition-colors"
+                className="p-1.5 text-[#F5F7F2] hover:text-[var(--color-gold)] transition-colors"
                 aria-label="Wishlist"
               >
                 <Heart
@@ -108,11 +108,11 @@ export default function QuickViewModal() {
               </button>
             </div>
 
-            <h3 className="font-serif text-3xl sm:text-4xl uppercase tracking-wide leading-tight text-[var(--color-text)]">
+            <h3 className="font-serif text-2xl sm:text-3xl md:text-4xl uppercase tracking-wide leading-tight text-[#F5F7F2]">
               {activeQuickViewProduct.name}
             </h3>
 
-            <p className="font-cinzel text-2xl font-light text-[var(--color-gold)]">
+            <p className="font-cinzel text-xl sm:text-2xl font-light text-[var(--color-gold)]">
               {activeQuickViewProduct.price}
             </p>
 
@@ -121,12 +121,12 @@ export default function QuickViewModal() {
             </p>
 
             {/* Specifications Matrix */}
-            <div className="pt-4 border-t border-[var(--color-border)] space-y-2.5 text-xs font-sans">
+            <div className="pt-4 border-t border-[var(--color-border)] space-y-2 text-xs font-sans">
               <div className="flex justify-between py-1 border-b border-[var(--color-border)]/50">
                 <span className="text-[var(--color-text-secondary)] font-cinzel text-[10px] uppercase tracking-wider">
                   Metal & Purity
                 </span>
-                <span className="text-[var(--color-text)] font-medium">
+                <span className="text-[#F5F7F2] font-medium">
                   {activeQuickViewProduct.specifications.metal}
                 </span>
               </div>
@@ -134,7 +134,7 @@ export default function QuickViewModal() {
                 <span className="text-[var(--color-text-secondary)] font-cinzel text-[10px] uppercase tracking-wider">
                   Gemstone
                 </span>
-                <span className="text-[var(--color-text)] font-medium">
+                <span className="text-[#F5F7F2] font-medium">
                   {activeQuickViewProduct.specifications.gemstone}
                 </span>
               </div>
@@ -142,7 +142,7 @@ export default function QuickViewModal() {
                 <span className="text-[var(--color-text-secondary)] font-cinzel text-[10px] uppercase tracking-wider">
                   Cut & Symmetry
                 </span>
-                <span className="text-[var(--color-text)] font-medium">
+                <span className="text-[#F5F7F2] font-medium">
                   {activeQuickViewProduct.specifications.cut}
                 </span>
               </div>
@@ -150,7 +150,7 @@ export default function QuickViewModal() {
                 <span className="text-[var(--color-text-secondary)] font-cinzel text-[10px] uppercase tracking-wider">
                   Atelier Provenance
                 </span>
-                <span className="text-[var(--color-text)] font-medium">
+                <span className="text-[#F5F7F2] font-medium">
                   {activeQuickViewProduct.specifications.origin}
                 </span>
               </div>
@@ -158,13 +158,13 @@ export default function QuickViewModal() {
           </div>
 
           {/* Action CTAs */}
-          <div className="pt-4 space-y-3">
+          <div className="pt-2 space-y-3">
             <button
               onClick={() => {
                 addToCart(activeQuickViewProduct);
                 setActiveQuickViewProduct(null);
               }}
-              className="w-full py-4 bg-[var(--color-gold)] text-[#0A0A09] text-[10px] tracking-[0.3em] font-cinzel uppercase font-semibold flex items-center justify-center space-x-2 hover:bg-[#F5F2EB] transition-colors"
+              className="w-full py-3.5 sm:py-4 bg-[var(--color-gold)] text-[#071510] text-[10px] tracking-[0.3em] font-cinzel uppercase font-semibold flex items-center justify-center space-x-2 hover:bg-[#F5F7F2] transition-colors shadow-lg"
             >
               <Plus className="w-4 h-4" />
               <span>Acquire This Piece</span>

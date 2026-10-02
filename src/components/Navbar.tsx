@@ -2,9 +2,8 @@
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
-import { Search, Heart, ShoppingBag, User, Menu, X, Sparkles } from "lucide-react";
+import { Search, Heart, ShoppingBag, User, Menu, X } from "lucide-react";
 import { useCart } from "@/context/CartContext";
-import { useTheme, ThemeType } from "@/context/ThemeContext";
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -12,11 +11,10 @@ export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
   const { totalItems, setIsCartOpen, wishlist } = useCart();
-  const { theme, setTheme } = useTheme();
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 80) {
+      if (window.scrollY > 50) {
         setIsScrolled(true);
       } else {
         setIsScrolled(false);
@@ -34,12 +32,6 @@ export default function Navbar() {
     { name: "Bespoke", href: "#bespoke" },
   ];
 
-  const themeOptions: { key: ThemeType; label: string }[] = [
-    { key: "ivory", label: "Alabaster Light" },
-    { key: "noir", label: "Royal Noir" },
-    { key: "emerald", label: "Emerald" },
-  ];
-
   const scrollToSection = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
     e.preventDefault();
     setMobileMenuOpen(false);
@@ -54,57 +46,39 @@ export default function Navbar() {
       <header
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
           isScrolled
-            ? "bg-[var(--color-bg)]/90 backdrop-blur-md border-b border-[var(--color-border)] py-3.5 shadow-sm"
-            : "bg-transparent py-6"
+            ? "bg-[#071510]/90 backdrop-blur-md border-b border-[var(--color-border)] py-4 shadow-2xl"
+            : "bg-transparent py-6 sm:py-8"
         }`}
       >
-        <div className="max-w-7xl mx-auto px-6 sm:px-10 flex items-center justify-between">
+        <div className="max-w-7xl mx-auto px-5 sm:px-10 flex items-center justify-between">
           {/* Mobile Menu Button */}
           <div className="flex items-center md:hidden">
             <button
               onClick={() => setMobileMenuOpen(true)}
               aria-label="Open Navigation Menu"
-              className="text-[var(--color-text)] p-1.5 focus:outline-none"
+              className="text-[var(--color-text)] p-2 hover:text-[var(--color-gold)] transition-colors focus:outline-none"
             >
-              <Menu className="w-5 h-5 stroke-[1.25]" />
+              <Menu className="w-5 h-5 stroke-[1.4]" />
             </button>
           </div>
 
           {/* Left / Brand Logo */}
-          <div className="flex items-center space-x-6">
+          <div className="flex items-center">
             <Link
               href="/"
-              className="group flex flex-col items-start leading-none tracking-widest text-[var(--color-text)]"
+              className="group flex flex-col items-center md:items-start leading-none tracking-widest text-[var(--color-text)]"
             >
-              <span className="font-serif text-xl sm:text-2xl tracking-[0.3em] uppercase font-normal group-hover:text-[var(--color-gold)] transition-colors duration-300">
+              <span className="font-serif text-2xl sm:text-3xl tracking-[0.28em] uppercase font-light group-hover:text-[var(--color-gold)] transition-colors duration-300">
                 AURELIA
               </span>
-              <span className="text-[8px] tracking-[0.45em] uppercase text-[var(--color-text-secondary)] font-cinzel mt-0.5">
-                Maison de Haute Joaillerie
+              <span className="text-[7px] sm:text-[8px] tracking-[0.45em] uppercase text-[var(--color-gold)] font-cinzel mt-1">
+                Haute Joaillerie
               </span>
             </Link>
-
-            {/* Quick Theme Switcher Pill (Desktop) */}
-            <div className="hidden xl:flex items-center space-x-1.5 px-2.5 py-1 rounded-full border border-[var(--color-border)] bg-[var(--color-bg)]/60 backdrop-blur-md shadow-sm">
-              <Sparkles className="w-3 h-3 text-[var(--color-gold)] mr-1" />
-              {themeOptions.map((opt) => (
-                <button
-                  key={opt.key}
-                  onClick={() => setTheme(opt.key)}
-                  className={`text-[9px] uppercase tracking-[0.18em] font-cinzel px-2.5 py-0.5 rounded-full transition-all ${
-                    theme === opt.key
-                      ? "bg-[var(--color-dark)] text-[var(--color-bg)] font-semibold shadow-sm"
-                      : "text-[var(--color-text-secondary)] hover:text-[var(--color-text)]"
-                  }`}
-                >
-                  {opt.label}
-                </button>
-              ))}
-            </div>
           </div>
 
           {/* Center Links (Desktop only) */}
-          <nav className="hidden md:flex items-center space-x-10">
+          <nav className="hidden md:flex items-center space-x-9 lg:space-x-12">
             {navLinks.map((link) => (
               <a
                 key={link.name}
@@ -118,14 +92,14 @@ export default function Navbar() {
           </nav>
 
           {/* Right Action Icons */}
-          <div className="flex items-center space-x-5 sm:space-x-7">
+          <div className="flex items-center space-x-4 sm:space-x-6">
             {/* Search */}
             <button
               onClick={() => setIsSearchOpen(!isSearchOpen)}
-              className="text-[var(--color-text)]/90 hover:text-[var(--color-gold)] transition-colors duration-300 p-1"
+              className="text-[var(--color-text)]/90 hover:text-[var(--color-gold)] transition-colors duration-300 p-1.5"
               aria-label="Search Collection"
             >
-              <Search className="w-4 h-4 stroke-[1.25]" />
+              <Search className="w-4 h-4 stroke-[1.4]" />
             </button>
 
             {/* Account (Desktop) */}
@@ -135,10 +109,10 @@ export default function Navbar() {
                   "Welcome to Aurelia Client Concierge. Private salon appointments and orders can be managed here."
                 )
               }
-              className="hidden lg:block text-[var(--color-text)]/90 hover:text-[var(--color-gold)] transition-colors duration-300 p-1"
+              className="hidden lg:block text-[var(--color-text)]/90 hover:text-[var(--color-gold)] transition-colors duration-300 p-1.5"
               aria-label="Client Account"
             >
-              <User className="w-4 h-4 stroke-[1.25]" />
+              <User className="w-4 h-4 stroke-[1.4]" />
             </button>
 
             {/* Wishlist */}
@@ -147,12 +121,12 @@ export default function Navbar() {
                 const el = document.querySelector("#featured");
                 if (el) el.scrollIntoView({ behavior: "smooth" });
               }}
-              className="relative text-[var(--color-text)]/90 hover:text-[var(--color-gold)] transition-colors duration-300 p-1"
+              className="relative text-[var(--color-text)]/90 hover:text-[var(--color-gold)] transition-colors duration-300 p-1.5"
               aria-label="Wishlist"
             >
-              <Heart className="w-4 h-4 stroke-[1.25]" />
+              <Heart className="w-4 h-4 stroke-[1.4]" />
               {wishlist.length > 0 && (
-                <span className="absolute -top-1 -right-1.5 w-3.5 h-3.5 bg-[var(--color-gold)] text-[var(--color-bg)] text-[8px] font-sans font-bold rounded-full flex items-center justify-center">
+                <span className="absolute -top-0.5 -right-0.5 w-3.5 h-3.5 bg-[var(--color-gold)] text-[#071510] text-[8px] font-sans font-bold rounded-full flex items-center justify-center">
                   {wishlist.length}
                 </span>
               )}
@@ -161,11 +135,11 @@ export default function Navbar() {
             {/* Bag */}
             <button
               onClick={() => setIsCartOpen(true)}
-              className="relative flex items-center space-x-1.5 text-[var(--color-text)]/90 hover:text-[var(--color-gold)] transition-colors duration-300 p-1"
+              className="relative flex items-center space-x-1.5 text-[var(--color-text)]/90 hover:text-[var(--color-gold)] transition-colors duration-300 p-1.5"
               aria-label="Shopping Bag"
             >
-              <ShoppingBag className="w-4 h-4 stroke-[1.25]" />
-              <span className="text-[10px] tracking-[0.1em] font-sans font-medium">
+              <ShoppingBag className="w-4 h-4 stroke-[1.4]" />
+              <span className="text-[10px] tracking-[0.1em] font-sans font-medium text-[var(--color-gold)]">
                 ({totalItems})
               </span>
             </button>
@@ -174,19 +148,19 @@ export default function Navbar() {
 
         {/* Expandable Luxury Search Bar */}
         {isSearchOpen && (
-          <div className="w-full bg-[var(--color-bg-secondary)] text-[var(--color-text)] py-4 px-6 border-t border-[var(--color-border)] animate-in fade-in slide-in-from-top-2 duration-300">
+          <div className="w-full bg-[#0D201A] text-[var(--color-text)] py-4 px-6 border-t border-[var(--color-border)] animate-in fade-in slide-in-from-top-2 duration-300 shadow-2xl">
             <div className="max-w-3xl mx-auto flex items-center justify-between">
               <input
                 type="text"
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                placeholder="Search high jewellery, solitaires, necklaces..."
+                placeholder="Search high jewellery, solitaires, emeralds, necklaces..."
                 className="w-full bg-transparent border-none text-[var(--color-text)] placeholder-[var(--color-text-secondary)] text-sm tracking-wider focus:outline-none font-serif text-lg italic"
                 autoFocus
               />
               <button
                 onClick={() => setIsSearchOpen(false)}
-                className="text-[var(--color-text-secondary)] hover:text-[var(--color-text)] ml-4 text-xs tracking-widest uppercase font-cinzel"
+                className="text-[var(--color-text-secondary)] hover:text-[var(--color-gold)] ml-4 text-xs tracking-widest uppercase font-cinzel"
               >
                 Close
               </button>
@@ -197,61 +171,39 @@ export default function Navbar() {
 
       {/* Mobile Slide-over Navigation */}
       {mobileMenuOpen && (
-        <div className="fixed inset-0 z-[60] bg-[var(--color-bg)] text-[var(--color-text)] flex flex-col justify-between p-8 md:hidden animate-in fade-in duration-300">
+        <div className="fixed inset-0 z-[60] bg-[#071510] text-[var(--color-text)] flex flex-col justify-between p-8 md:hidden animate-in fade-in duration-300">
           <div className="flex justify-between items-center border-b border-[var(--color-border)] pb-6">
-            <span className="font-serif text-2xl tracking-[0.3em] uppercase">
+            <span className="font-serif text-2xl tracking-[0.25em] uppercase text-[var(--color-text)]">
               AURELIA
             </span>
             <button
               onClick={() => setMobileMenuOpen(false)}
-              className="text-[var(--color-text)] p-2"
+              className="text-[var(--color-text)] p-2 hover:text-[var(--color-gold)] transition-colors"
               aria-label="Close Menu"
             >
               <X className="w-6 h-6 stroke-[1.2]" />
             </button>
           </div>
 
-          <div className="flex flex-col space-y-6 my-auto">
+          <div className="flex flex-col space-y-7 my-auto">
             {navLinks.map((link, idx) => (
               <a
                 key={link.name}
                 href={link.href}
                 onClick={(e) => scrollToSection(e, link.href)}
-                className="font-serif text-2xl tracking-[0.15em] uppercase hover:text-[var(--color-gold)] transition-colors"
+                className="font-serif text-3xl tracking-[0.12em] uppercase hover:text-[var(--color-gold)] transition-colors flex items-center"
               >
-                <span className="text-xs font-cinzel text-[var(--color-gold)] mr-3">
+                <span className="text-xs font-cinzel text-[var(--color-gold)] mr-4">
                   0{idx + 1}
                 </span>
                 {link.name}
               </a>
             ))}
-
-            {/* Mobile Theme Selector */}
-            <div className="pt-6 border-t border-[var(--color-border)]">
-              <span className="text-[10px] tracking-[0.3em] uppercase font-cinzel text-[var(--color-text-secondary)] block mb-3">
-                Palette Mood
-              </span>
-              <div className="flex gap-2">
-                {themeOptions.map((opt) => (
-                  <button
-                    key={opt.key}
-                    onClick={() => setTheme(opt.key)}
-                    className={`text-[10px] uppercase tracking-wider font-cinzel px-3 py-1.5 rounded-full border transition-all ${
-                      theme === opt.key
-                        ? "bg-[var(--color-dark)] text-[var(--color-bg)] border-[var(--color-dark)] font-medium"
-                        : "border-[var(--color-border)] text-[var(--color-text)]"
-                    }`}
-                  >
-                    {opt.label}
-                  </button>
-                ))}
-              </div>
-            </div>
           </div>
 
-          <div className="border-t border-[var(--color-border)] pt-6 flex flex-col space-y-3 text-xs tracking-[0.2em] text-[var(--color-text-secondary)] uppercase">
+          <div className="border-t border-[var(--color-border)] pt-6 flex flex-col space-y-2 text-xs tracking-[0.2em] text-[var(--color-text-secondary)] uppercase font-cinzel">
             <span>Private Salon Viewing</span>
-            <span>Concierge: +91 (0) 22 8900 1200</span>
+            <span className="text-[var(--color-gold)]">Concierge: +91 (0) 22 8900 1200</span>
           </div>
         </div>
       )}
